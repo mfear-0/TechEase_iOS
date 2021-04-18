@@ -2,14 +2,15 @@
 //  ContentView.swift
 //  TechEase
 //
-//  Created by Student Account on 4/17/21.
+//  Created by Arica Conrad, Mackenzie Fear,
+//  Hans Mandt, and Natalman Nahm on 4/17/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("Hello, TechEase!")
             .padding()
     }
 }
