@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+//TESTING STUFF WITH THE REPO NAME
 struct CascadiaCourse : Identifiable {
     let id = UUID()
     let img: String
