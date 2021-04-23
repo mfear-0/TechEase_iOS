@@ -20,9 +20,9 @@ struct viewTutorial: View {
     /*
     Arica: I modified the design of the image and text within the button. Yes, there are a lot of Spacers, but that is how I think I was able to get the image to be on the far left and the text to be centered within the button.
     */
-    
+    @State private var showingAlert = false
     var body: some View{
-        Button(action:{ }) {
+        Button(action:{ self.showingAlert = true }) {
             HStack{
                 Image(systemName: tutorialDisplay.Icon)
                     .resizable()
@@ -40,6 +40,9 @@ struct viewTutorial: View {
         }
         .padding(10)
         .buttonStyle(RoundedButton())
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text(tutorialDisplay.TutorialName), message: Text("Just testing button! Click OK to dismiss"), dismissButton: .default(Text("OK")))
+                }
     }
 }
 
