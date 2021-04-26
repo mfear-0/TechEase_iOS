@@ -83,6 +83,8 @@ struct HelpButton: ButtonStyle {
         return configuration
             .label
             .padding()
+            .background(Circle().stroke(Color("Black"), lineWidth: 2).background(Color("Yellow")))
+            .foregroundColor(.black)
     }
 }
 

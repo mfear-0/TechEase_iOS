@@ -62,6 +62,11 @@ struct Accessibility: View {
             
             
             Spacer()
+            Button(action: {}) {
+                Text("Help")
+                    .padding()
+            }
+            .buttonStyle(HelpButton())
         }
     }
 }
