@@ -14,7 +14,7 @@ struct CascadiaCourse : Identifiable {
     let title: String
     
 }
-
+//test comment
 struct CourseRow: View {
     let whichCourse: CascadiaCourse
     var body: some View {
