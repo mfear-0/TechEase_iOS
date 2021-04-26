@@ -11,6 +11,7 @@
 		3F0F5B04262BC97B00446AD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F5B03262BC97B00446AD2 /* ContentView.swift */; };
 		3F0F5B06262BC97C00446AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B05262BC97C00446AD2 /* Assets.xcassets */; };
 		3F0F5B09262BC97C00446AD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */; };
+		3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */; };
 		5FFDE801262FA58B00ADEEDF /* TechEaseTutorialList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE800262FA58B00ADEEDF /* TechEaseTutorialList.swift */; };
 		5FFDE810262FABCB00ADEEDF /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE80F262FABCB00ADEEDF /* SettingsScreen.swift */; };
 		5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE813262FAFF200ADEEDF /* Accessibility.swift */; };
@@ -23,6 +24,7 @@
 		3F0F5B05262BC97C00446AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F0F5B0A262BC97C00446AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
 		5FFDE800262FA58B00ADEEDF /* TechEaseTutorialList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechEaseTutorialList.swift; sourceTree = "<group>"; };
 		5FFDE80F262FABCB00ADEEDF /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		5FFDE813262FAFF200ADEEDF /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				5FFDE80F262FABCB00ADEEDF /* SettingsScreen.swift */,
+				3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */,
 				5FFDE813262FAFF200ADEEDF /* Accessibility.swift */,
 				5FFDE800262FA58B00ADEEDF /* TechEaseTutorialList.swift */,
 				3F0F5B01262BC97B00446AD2 /* TechEaseApp.swift */,
@@ -149,6 +152,7 @@
 			files = (
 				5FFDE810262FABCB00ADEEDF /* SettingsScreen.swift in Sources */,
 				3F0F5B04262BC97B00446AD2 /* ContentView.swift in Sources */,
+				3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */,
 				5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */,
 				3F0F5B02262BC97B00446AD2 /* TechEaseApp.swift in Sources */,
 				5FFDE801262FA58B00ADEEDF /* TechEaseTutorialList.swift in Sources */,
