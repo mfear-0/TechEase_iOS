@@ -21,6 +21,8 @@ struct CustomButton: View {
                 .frame(width:28, height: 48)
             Text(label)
                 .padding(.all, 28.0)
+            
+            Spacer()
         }
         .font(.system(size: 24.0))
         .foregroundColor(.black)

@@ -17,6 +17,7 @@
 		5FB46C37263D9851008B809D /* DetailTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C36263D9851008B809D /* DetailTutorial.swift */; };
 		5FB46C3A263D98FF008B809D /* TutorialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C39263D98FF008B809D /* TutorialModel.swift */; };
 		5FB46C40263D9A8D008B809D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C3F263D9A8D008B809D /* RoundedButton.swift */; };
+		5FB46C42263DAB16008B809D /* ListOfTutorials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C41263DAB16008B809D /* ListOfTutorials.swift */; };
 		5FFDE801262FA58B00ADEEDF /* TechEaseTutorialList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE800262FA58B00ADEEDF /* TechEaseTutorialList.swift */; };
 		5FFDE810262FABCB00ADEEDF /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE80F262FABCB00ADEEDF /* SettingsScreen.swift */; };
 		5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE813262FAFF200ADEEDF /* Accessibility.swift */; };
@@ -35,6 +36,7 @@
 		5FB46C36263D9851008B809D /* DetailTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTutorial.swift; sourceTree = "<group>"; };
 		5FB46C39263D98FF008B809D /* TutorialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialModel.swift; sourceTree = "<group>"; };
 		5FB46C3F263D9A8D008B809D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5FB46C41263DAB16008B809D /* ListOfTutorials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTutorials.swift; sourceTree = "<group>"; };
 		5FFDE800262FA58B00ADEEDF /* TechEaseTutorialList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechEaseTutorialList.swift; sourceTree = "<group>"; };
 		5FFDE80F262FABCB00ADEEDF /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		5FFDE813262FAFF200ADEEDF /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				5FB46C32263CBD4C008B809D /* CustomButton.swift */,
 				5FB46C39263D98FF008B809D /* TutorialModel.swift */,
 				5FB46C3F263D9A8D008B809D /* RoundedButton.swift */,
+				5FB46C41263DAB16008B809D /* ListOfTutorials.swift */,
 			);
 			path = ModelsAndCustomViews;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */,
 				5FB46C40263D9A8D008B809D /* RoundedButton.swift in Sources */,
 				5FB46C33263CBD4C008B809D /* CustomButton.swift in Sources */,
+				5FB46C42263DAB16008B809D /* ListOfTutorials.swift in Sources */,
 				3F0F5B02262BC97B00446AD2 /* TechEaseApp.swift in Sources */,
 				5FFDE801262FA58B00ADEEDF /* TechEaseTutorialList.swift in Sources */,
 				5FB46C35263CBF39008B809D /* Homepage.swift in Sources */,
