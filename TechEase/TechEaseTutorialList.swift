@@ -14,10 +14,9 @@ struct viewTutorial: View {
     /*
     Arica: I modified the design of the image and text within the button. Yes, there are a lot of Spacers, but that is how I think I was able to get the image to be on the far left and the text to be centered within the button.
     */
-    @State private var detailTutorialList : Array<Tutorial> = []
     var body: some View{
         ZStack{
-            NavigationLink(destination: DetailTutorial(detailTutorialList: self.detailTutorialList)){
+            NavigationLink(destination: DetailTutorial(detailTutorialList: self.getArrayListOfTut(tutName: tutorialDisplay.TutorialName) )){
                 EmptyView()
             }
             .opacity(0)
@@ -39,17 +38,17 @@ struct viewTutorial: View {
             }
         }
     }
-}
-
-func getArrayListOfTut(tutName: String) -> Array<Tutorial> {
-    if tutName == "Phone Features" {
-        return phoneFeatureList
-    } else if tutName == "Apps" {
-        return appList
-    } else if tutName == "Internet" {
-       return internetList
-    } else {
-        return socialMediaList
+    
+    func getArrayListOfTut(tutName: String) -> Array<Tutorial> {
+        if tutName == "Phone Features" {
+            return phoneFeatureList
+        } else if tutName == "Apps" {
+            return appList
+        } else if tutName == "Internet" {
+           return internetList
+        } else {
+            return socialMediaList
+        }
     }
 }
 
