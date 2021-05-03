@@ -24,6 +24,7 @@ struct CustomButton: View {
             Text(label)
                 .padding(.all, 28.0)
             
+            Spacer()
             // Arica: What I want to use eventually:
             /*
              
