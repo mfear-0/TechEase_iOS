@@ -18,13 +18,19 @@ struct CustomButton: View {
     var label: String
     var body: some View {
         HStack{
+
             Image(systemName: icon)
                 .resizable()
-                .frame(width:28, height: 48)
-            Text(label)
-                .padding(.all, 28.0)
-            
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40)
             Spacer()
+            Spacer()
+            Text(label)
+                .font(.title2)
+                .foregroundColor(Color("Black"))
+            Spacer()
+            Spacer()
+
             // Arica: What I want to use eventually:
             /*
              
@@ -43,13 +49,10 @@ struct CustomButton: View {
              
              */
         }
-        .font(.system(size: 24.0))
+        .padding()
+        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
         .foregroundColor(.black)
-        .padding(.horizontal, 42.0)
-        
-        .background(Color(red: 177/255, green: 255/255, blue: 156/255))
-        .overlay(
-            RoundedRectangle(cornerRadius: 5) .stroke(Color.black, lineWidth: 3.5))
         
         // Arica: What I want to use eventually:
         /*
