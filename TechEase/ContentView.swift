@@ -7,64 +7,59 @@
 //
 
 import SwiftUI
-//TESTING STUFF WITH THE REPO NAME
-struct CascadiaCourse : Identifiable {
-    let id = UUID()
-    let img: String
-    let title: String
-    
-}
-//test comment
-struct CourseRow: View {
-    let whichCourse: CascadiaCourse
-    var body: some View {
-        HStack {
-            Image(systemName: whichCourse.img)
-            Button(whichCourse.title){
-                print("button pressed")
-            }
-        }
-    }
-}
 
 struct ContentView: View {
     
-    let courseList = [
-        CascadiaCourse(img: "text.bubble.fill", title: "Texting"),
-        CascadiaCourse(img: "envelope.fill", title: "Email"),
-        CascadiaCourse(img: "phone.circle.fill", title: "Some other phone thing")
-    ]
-    
+//    init() {
+//        UINavigationBar.appearance().backgroundColor = UIColor.green
+//    }
     var body: some View {
-        VStack {
+        VStack{
             
-            NavigationView {
-                Text("Sample Tutorials:").font(.title)
-                .navigationBarTitle("TechEase", displayMode: .inline)
-                    .navigationBarItems(trailing:
-                                            HStack{
-                                                Button("back"){
-                                                    print("back")
+            NavigationView{
+                
+                VStack{
+                    
+                    Text("Tap a button below to view the tutorials in that group.")
+                        .font(.title3)
+                        .foregroundColor(Color("Black"))
+                        .multilineTextAlignment(.leading)
+                        .padding(10)
+                    
+                    List(tutorialList) { aTutorial in
+                        viewTutorial(tutorialDisplay: aTutorial)
+                            .padding()
+                            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                            .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
+                            .foregroundColor(.black)
+                    }
+                    .padding(.top, 0)
+                    .listStyle(PlainListStyle())
+                    .navigationBarTitle("Tutorials")
+                    .navigationBarItems(leading:
+                                            Button(action: {
+                                                print("Button 1 pressed")
+                                            }) {
+                                                Image(systemName: "envelope.circle").imageScale(.large)
+                                            },
+                                        trailing:
+                                            Button(action: {}, label: {
+                                                NavigationLink(destination: Homepage()) {
+                                                    Text("Home")
                                                 }
-                                                Button("home"){
-                                                    print("home")
-                                                }
-                                            }
-                    )
+                                            }))
+                }
             }
-            .frame(height: 100.0)
-
             
-            List(courseList) { aCourse in
-                CourseRow(whichCourse:aCourse)
-            }
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
 
