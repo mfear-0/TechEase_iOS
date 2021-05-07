@@ -83,10 +83,10 @@
 				5FFDE800262FA58B00ADEEDF /* TechEaseTutorialList.swift */,
 				3F0F5B01262BC97B00446AD2 /* TechEaseApp.swift */,
 				3F0F5B03262BC97B00446AD2 /* ContentView.swift */,
+				5FB46C36263D9851008B809D /* DetailTutorial.swift */,
 				3F0F5B05262BC97C00446AD2 /* Assets.xcassets */,
 				3F0F5B0A262BC97C00446AD2 /* Info.plist */,
 				3F0F5B07262BC97C00446AD2 /* Preview Content */,
-				5FB46C36263D9851008B809D /* DetailTutorial.swift */,
 			);
 			path = TechEase;
 			sourceTree = "<group>";

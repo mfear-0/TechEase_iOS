@@ -6,6 +6,8 @@
 //  @Arica, You might want to edit this if you want to customize the button.
 //
 //  Modified by Arica Conrad on 5/1/21.
+//  Modified by Arica Conrad on 5/6/21.
+//
 
 /**
  This is a custom button of a sort. it will be used across the application inside NavigatioView to transition between screens.
@@ -30,39 +32,12 @@ struct CustomButton: View {
                 .foregroundColor(Color("Black"))
             Spacer()
             Spacer()
-
-            // Arica: What I want to use eventually:
-            /*
-             
-             Image(systemName: icon)
-                 .resizable()
-                 .aspectRatio(contentMode: .fit)
-                 .frame(width: 40, height: 40)
-             Spacer()
-             Spacer()
-             Text(label)
-                 .font(.title2)
-                 .foregroundColor(Color("Black"))
-             Spacer()
-             Spacer()
-             Spacer()
-             
-             */
+            Spacer()
         }
         .padding()
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
         .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-        .foregroundColor(.black)
-        
-        // Arica: What I want to use eventually:
-        /*
-         
-         .padding()
-         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-         .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-         .foregroundColor(Color("Black"))
-         
-         */
+        .foregroundColor(Color("Black"))
     }
 }
 
