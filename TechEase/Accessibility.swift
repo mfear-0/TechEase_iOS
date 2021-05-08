@@ -4,6 +4,7 @@
 //
 //  Created by Natalman Nahm on 4/20/21.
 //  Modified by Arica Conrad on 5/1/21.
+//  Modified by Arica Conrad on 5/6/21.
 //
 
 /*
@@ -127,56 +128,53 @@ struct Accessibility: View {
                 .buttonStyle(RoundedButton())
                 
             }
-                  
-            /*
-             
-             Arica: This is just temporary. I would like to use a ZStack in the future, like the code I have down below.
-             
-             */
             
+            
+            // Arica: This Spacer is so the ZStack can be at the bottom of the screen.
             Spacer()
-            HStack {
-                Spacer()
-                Button(action: {}) {
-                    Text("Help")
-                        .padding()
-                }
-                .padding()
-                .buttonStyle(HelpButton())
-            }
             
-            /*
-            Arica: The following is sample ZStack code for the Help button.
-            */
-            
-            /*
+            // Arica: First, we make a ZStack. This allows the Help button to be an overlay on every screen, meaning the button is always visible, even when scrolling.
             ZStack {
+                
+                // Arica: Then, we make an HStack, as the button needs to be on the far right horizontally.
                 HStack {
+                    
+                    // Arica: This is for the scroll icon and text. For any screens that scroll, uncomment this code. Since the Accessibility screen does not have enough buttons to scroll, the code is commented out.
+                    
+                    /*
                     HStack {
                         Image(systemName: "hand.draw")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 40, height: 40)
                             .padding(10)
-                        Text("Swipe up to see more tutorials.")
+                        Text("Swipe up or down to see more content.")
                             .font(.title3)
                             .foregroundColor(Color("Black"))
                             .multilineTextAlignment(.leading)
                     }
+                    .padding(10)
+                    */
                     
+                    
+                    // Arica: Then we use a Spacer to push the button to the far right.
                     Spacer()
                     
-                    Button(action: {}) {
-                        Text("Help")
-                            .padding()
-                    }
-                    .background(Color("LightYellow"))
+                    // Arica: Then we use the button.
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        VStack {
+                            Image(systemName: "questionmark")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                            Text("Help")
+                                .font(.title2)
+                                .foregroundColor(Color("Black"))
+                        }
+                    })
                     .buttonStyle(HelpButton())
-                    .padding(10)
-                    
                 }
             }
-            */
         }
         
         
