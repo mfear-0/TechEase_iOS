@@ -22,8 +22,7 @@ import SwiftUI
 
 struct SettingsScreen: View {
     var body: some View {
-        
-        NavigationView {
+
             
             VStack() {
                 
@@ -33,15 +32,15 @@ struct SettingsScreen: View {
                  
                  */
                 
-                Text("Settings")
-                   .font(.largeTitle)
-                   .fontWeight(.regular)
-                   .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                   .foregroundColor(Color("Black"))
-                   .padding()
-                   .border(/*@START_MENU_TOKEN@*/Color("DarkGreen")/*@END_MENU_TOKEN@*/, width: 2)
-                   .background(Color("LightGreen"))
-                   .padding()
+//                Text("Settings")
+//                   .font(.largeTitle)
+//                   .fontWeight(.regular)
+//                   .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+//                   .foregroundColor(Color("Black"))
+//                   .padding()
+//                   .border(/*@START_MENU_TOKEN@*/Color("DarkGreen")/*@END_MENU_TOKEN@*/, width: 2)
+//                   .background(Color("LightGreen"))
+//                   .padding()
                                 
                 
                 /*
@@ -115,10 +114,9 @@ struct SettingsScreen: View {
                 }
                 */
             }
-            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarTitle("Settings", displayMode: .inline)
             
         }
-    }
 }
 
 struct SettingsScreen_Previews: PreviewProvider {

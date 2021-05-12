@@ -17,15 +17,15 @@ struct NotificationsScreen: View {
              
              */
             
-            Text("Notifications")
-               .font(.largeTitle)
-               .fontWeight(.regular)
-               .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-               .foregroundColor(Color("Black"))
-               .padding()
-               .border(/*@START_MENU_TOKEN@*/Color("DarkGreen")/*@END_MENU_TOKEN@*/, width: 2)
-               .background(Color("LightGreen"))
-               .padding()
+//            Text("Notifications")
+//               .font(.largeTitle)
+//               .fontWeight(.regular)
+//               .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+//               .foregroundColor(Color("Black"))
+//               .padding()
+//               .border(/*@START_MENU_TOKEN@*/Color("DarkGreen")/*@END_MENU_TOKEN@*/, width: 2)
+//               .background(Color("LightGreen"))
+//               .padding()
             
             /*
              
@@ -51,7 +51,7 @@ struct NotificationsScreen: View {
              Arica: A Spacer to push everything to the top of the screen.
              
             */
-            
+                .navigationBarTitle("Notifications")
             Spacer()
         }
     }
