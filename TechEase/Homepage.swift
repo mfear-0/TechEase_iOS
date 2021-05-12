@@ -10,29 +10,34 @@ import SwiftUI
 struct Homepage: View {
     var body: some View {
         NavigationView{
-            VStack(alignment: .center, spacing: 0.0){
+            VStack(){
                 Text("Welcome!")
                     .font(.system(size: 32.0))
                     .foregroundColor(Color("DarkBlue"))
                     .padding(.bottom)
                 Text("Tap a button to access the tutorials or the settings. If you help, tap the help button in the bottom right corner.")
-                    .padding(.horizontal)
+                    .font(.title3)
+                    .foregroundColor(Color("Black"))
+                    .multilineTextAlignment(.leading)
+                    .padding(10)
+                
                 NavigationLink(
                     destination: TechEaseTutorialList()){
                     /* @Arica, you can refer back to the CustomButton if you want to customize these buttons. I just made a separate file for it to keep the code clean and reusable.
                      */
                     CustomButton(icon: "books.vertical", label: "Start Tutorial")
+                        .padding()
                 }
-                .padding(.vertical)
                 
                 NavigationLink(
                     destination: SettingsScreen()){
                     CustomButton(icon: "gearshape", label: "Settings")
+                        .padding()
                 }
-                
                 Spacer()
                 
             }
+            .navigationBarTitle("", displayMode: .inline)
         }
     }
 }
