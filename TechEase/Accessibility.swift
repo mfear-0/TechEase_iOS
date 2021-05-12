@@ -28,15 +28,15 @@ struct Accessibility: View {
              
              */
             
-            Text("Accessibility")
-               .font(.largeTitle)
-               .fontWeight(.regular)
-               .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-               .foregroundColor(Color("Black"))
-               .padding()
-               .border(/*@START_MENU_TOKEN@*/Color("DarkGreen")/*@END_MENU_TOKEN@*/, width: 2)
-               .background(Color("LightGreen"))
-               .padding()
+//            Text("Accessibility")
+//               .font(.largeTitle)
+//               .fontWeight(.regular)
+//               .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+//               .foregroundColor(Color("Black"))
+//               .padding()
+//               .border(/*@START_MENU_TOKEN@*/Color("DarkGreen")/*@END_MENU_TOKEN@*/, width: 2)
+//               .background(Color("LightGreen"))
+//               .padding()
                             
             
             /*
@@ -125,6 +125,7 @@ struct Accessibility: View {
                     }
                 }
                 .padding()
+                .navigationBarTitle("Accessibility")
                 .buttonStyle(RoundedButton())
                 
             }

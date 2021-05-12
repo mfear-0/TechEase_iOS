@@ -10,9 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    init() {
-//        UINavigationBar.appearance().backgroundColor = UIColor.green
-//    }
+    init() {
+        UINavigationBar.appearance().backgroundColor = UIColor.green
+    }
     var body: some View {
         VStack{
             
@@ -35,12 +35,12 @@ struct ContentView: View {
                     }
                     .padding(.top, 0)
                     .listStyle(PlainListStyle())
-                    .navigationBarTitle("Tutorials")
+                    .navigationBarTitle("Tutorials", displayMode: .inline)
                     .navigationBarItems(leading:
                                             Button(action: {
                                                 print("Button 1 pressed")
                                             }) {
-                                                Image(systemName: "envelope.circle").imageScale(.large)
+                                                Image(systemName: "arrow.left").imageScale(.large)
                                             },
                                         trailing:
                                             Button(action: {}, label: {

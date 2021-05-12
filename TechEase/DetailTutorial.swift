@@ -46,8 +46,7 @@ struct DetailTutorial: View {
     var detailTutorialList : Array<Tutorial>
     
     var body: some View {
-        VStack{
-            NavigationView{
+
                 VStack{
                     
                     Text("Tap a button below to learn more about that tutorial.")
@@ -65,14 +64,10 @@ struct DetailTutorial: View {
                     }
                     .padding(.top, 0)
                     .listStyle(PlainListStyle())
-                    .navigationBarTitle("", displayMode: .inline)
+                    .navigationBarTitle("Tutorial Details", displayMode: .inline)
                 }
                 
             }
-            
-            
-        }
-    }
 }
 
 struct DetailTutorial_Previews: PreviewProvider {
