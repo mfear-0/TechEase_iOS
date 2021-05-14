@@ -13,6 +13,7 @@
 		3F0F5B09262BC97C00446AD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */; };
 		3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */; };
 		3FEF5180263CD94E00237755 /* NotificationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF517F263CD94E00237755 /* NotificationsScreen.swift */; };
+		5FA4B4A0264DCC2800C357C3 /* OverviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */; };
 		5FB46C33263CBD4C008B809D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C32263CBD4C008B809D /* CustomButton.swift */; };
 		5FB46C35263CBF39008B809D /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C34263CBF39008B809D /* Homepage.swift */; };
 		5FB46C37263D9851008B809D /* DetailTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C36263D9851008B809D /* DetailTutorial.swift */; };
@@ -33,6 +34,7 @@
 		3F0F5B0A262BC97C00446AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
 		3FEF517F263CD94E00237755 /* NotificationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsScreen.swift; sourceTree = "<group>"; };
+		5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreen.swift; sourceTree = "<group>"; };
 		5FB46C32263CBD4C008B809D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5FB46C34263CBF39008B809D /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		5FB46C36263D9851008B809D /* DetailTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTutorial.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				3F0F5B05262BC97C00446AD2 /* Assets.xcassets */,
 				3F0F5B0A262BC97C00446AD2 /* Info.plist */,
 				3F0F5B07262BC97C00446AD2 /* Preview Content */,
+				5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */,
 			);
 			path = TechEase;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				5FB46C37263D9851008B809D /* DetailTutorial.swift in Sources */,
 				5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */,
 				5FB46C40263D9A8D008B809D /* RoundedButton.swift in Sources */,
+				5FA4B4A0264DCC2800C357C3 /* OverviewScreen.swift in Sources */,
 				5FB46C33263CBD4C008B809D /* CustomButton.swift in Sources */,
 				5FB46C42263DAB16008B809D /* ListOfTutorials.swift in Sources */,
 				3F0F5B02262BC97B00446AD2 /* TechEaseApp.swift in Sources */,
