@@ -7,6 +7,7 @@
 //
 //  Modified by Arica Conrad on 5/1/21.
 //  Modified by Arica Conrad on 5/6/21.
+//  Modified by Arica Conrad on 5/15/21.
 //
 
 /**
@@ -25,6 +26,7 @@ struct CustomButton: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
+                .foregroundColor(Color("Black"))
             Spacer()
             Spacer()
             Text(label)

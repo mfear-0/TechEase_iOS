@@ -4,6 +4,7 @@
 //
 //  Created by Hans Mandt on 4/21/21.
 //  Modified by Arica Conrad on 5/6/21.
+//  Modified by Arica Conrad on 5/16/21.
 //
 
 import SwiftUI
@@ -30,7 +31,7 @@ struct HelpScreen: View {
             
             /*
             
-            Arica: The ScrollView encompasses the text, not the buttons. This allows the buttons to stay on the screen all the time. If we want the buttons to not stay on the screen, we can move the buttons back within the ScrollView.
+            Arica: The ScrollView encompasses the text and the "Contact Us" button, but not the swipe up or down text.
              
             */
             
@@ -53,7 +54,8 @@ struct HelpScreen: View {
                     
                 
                 Text("Tap the screen to press buttons. Swipe your finger up to scroll the page down, and swipe down to scroll the page up.")
-                    .font(.body)
+                    .foregroundColor(Color("Black"))
+                    .font(.title3)
                     .multilineTextAlignment(.leading)
                     .padding()
 
@@ -69,7 +71,8 @@ struct HelpScreen: View {
 
                 
                 Text("The Home button will take you back to the first screen (also known as the Home Screen) of this app. The back button will take you to the previous screen you were on.")
-                    .font(.body)
+                    .foregroundColor(Color("Black"))
+                    .font(.title3)
                     .multilineTextAlignment(.leading)
                     .padding()
                 
@@ -85,60 +88,97 @@ struct HelpScreen: View {
                     
                 
                 Text("Tutorials are grouped into categories. Selecting a tutorial category button will take you to a list of tutorials within that category. You can choose from the category list by tapping on one of the buttons to access that specific tutorial.")
-                    .font(.body)
+                    .foregroundColor(Color("Black"))
+                    .font(.title3)
                     .multilineTextAlignment(.leading)
                     .padding()
+                
+                /*
+                
+                Arica: The "Contact Us" button is still within the ScrollView, so the user will need to scroll to see the button.
+                 
+                */
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    HStack {
+                        Image(systemName: "envelope")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(Color("Black"))
+                        Spacer()
+                        Spacer()
+                        Text("Contact Us")
+                            .font(.title2)
+                            .foregroundColor(Color("Black"))
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
+                }
+                .padding()
+                .buttonStyle(RoundedButton())
+                
+                
             }
-            
             
             /*
             
-            Arica: As mentioned above, the buttons are outside the ScrollView. If we don't want the buttons to always be on the screen, the buttons' code can be moved back inside the ScrollView.
+            Arica: This is the code for having both the scroll text and the Help Button be present together. The Help Button code is commented out because we are already on the Help screen.
+             
+             What the styling at the end of the ZStack does is it makes a light gray rectangle to outline our scroll text. I had to use the RoundedRectangle style, but I set the corner radius value to be zero so it still looks like a rectangle.
+             
+             @Hans Mandt
+             When you add the Help Button to each screen, please use the following code. If the screen scolls, please also include the code for the scroll icon and text.
              
             */
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            ZStack {
                 HStack {
-                    Image(systemName: "phone")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
+                    HStack {
+                        Image(systemName: "hand.draw")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .padding(10)
+                            .foregroundColor(Color("Black"))
+                        Text("Swipe up or down to see more content.")
+                            .font(.title3)
+                            .foregroundColor(Color("Black"))
+                            .multilineTextAlignment(.leading)
+                    }
+                    .padding(10)
+
                     Spacer()
-                    Spacer()
-                    Text("Contact Us")
-                        .font(.title2)
-                        .foregroundColor(Color("Black"))
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                    
+                    /*
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        VStack {
+                            Image(systemName: "questionmark")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                            Text("Help")
+                                .font(.title2)
+                                .foregroundColor(Color("Black"))
+                        }
+                    })
+                    .buttonStyle(HelpButton())
+                    */
                 }
             }
-                .padding()
-                .buttonStyle(RoundedButton())
-            
-            
-            Button(action: {}) {
-                HStack {
-                    Image(systemName: "envelope")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
-                    Spacer()
-                    Spacer()
-                    Text("Email Us")
-                        .font(.title2)
-                        .foregroundColor(Color("Black"))
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                }
-            }
-            .padding()
-            .buttonStyle(RoundedButton())
+            .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
         }
     }
 }
 
+/*
+
+Arica: I made a separate file for the Help Button code. In the unlikely event the code does not work, here is the code in its original location.
+ 
+*/
+
+/*
 struct HelpButton: ButtonStyle {
     func makeBody (configuration: Self.Configuration) -> some View {
         return configuration
@@ -151,7 +191,7 @@ struct HelpButton: ButtonStyle {
             .padding()
     }
 }
-
+*/
 
 struct HelpScreen_Previews:
     PreviewProvider {

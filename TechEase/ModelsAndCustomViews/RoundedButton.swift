@@ -3,6 +3,7 @@
 //  TechEase
 //
 //  Created by Natalman Nahm on 5/1/21.
+//  Modified by Arica Conrad on 5/15/21.
 //
 
 import Foundation
@@ -18,6 +19,6 @@ struct RoundedButton: ButtonStyle {
             .padding()
             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-            .foregroundColor(.black)
+            .foregroundColor(Color("Black"))
     }
 }
