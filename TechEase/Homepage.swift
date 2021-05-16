@@ -3,6 +3,7 @@
 //  TechEase
 //
 //  Created by Natalman Nahm on 4/30/21.
+//  Modified by Arica Conrad on 5/15/21.
 //
 
 import SwiftUI
@@ -16,20 +17,53 @@ struct Homepage: View {
     var body: some View {
         NavigationView{
             VStack(){
-                Text("Welcome!")
-                    .font(.system(size: 32.0))
-                    .foregroundColor(Color("DarkBlue"))
-                    .padding(.bottom)
-                    .padding(.top)
-                Text("Tap a button to access the tutorials or the settings. If you help, tap the help button in the bottom right corner.")
-                    .font(.title3)
+                
+                /*
+                 
+                Arica: This is the welcome title at the top of the screen.
+                 
+                 The reason the title text is in the HStack is because the Spacers seem to directly control the placement of the title. A VStack automatically centers the text, but I don't necessarily want to rely on that. Using the .multilineTextAlignment property has no effect on it, which is a bit concerning to me. That is why the title text is in an HStack (so we can directly control the placement of the title).
+                 
+                 If we want to change the placement of the title later, say, to the left, we can take out one Spacer and it works. Not doing it this way means we would not be able to do that.
+                 
+                 For any screen that does not use a title text like this, we do not need to use an HStack.
+                 
+                */
+                
+                HStack {
+                    Spacer()
+                    Text("Welcome!")
+                        .font(.title)
+                        .foregroundColor(Color("DarkBlue"))
+                    Spacer()
+                }
+                .padding()
+                    
+                /*
+                
+                Arica: This is the text that explains to the users what they can do on this screen.
+                 
+                FUTURE NOTE TO MYSELF:
+                Body text on the screens should use the ".title3" font size. Captions for photos should use the ".body" font size.
+                 
+                */
+                
+                
+                Text("Tap a button to access the tutorials or the settings. If you need help, tap the help button in the bottom right corner.")
                     .foregroundColor(Color("Black"))
+                    .font(.title3)
                     .multilineTextAlignment(.leading)
-                    .padding(10)
+                    .padding()
+                
+                /*
+                
+                Arica: These are the buttons that navigate to the tutorials and to the settings.
+                 
+                */
                 
                 NavigationLink(
                     destination: TechEaseTutorialList()){
-                    CustomButton(icon: "books.vertical", label: "Start Tutorial")
+                    CustomButton(icon: "book", label: "Start Tutorials")
                         .padding()
                 }
                 

@@ -4,6 +4,7 @@
 //
 //  Created by Natalman Nahm on 4/20/21.
 //  Modified by Arica Conrad on 4/20/21.
+//  Modified by Arica Conrad on 5/15/21.
 //
 
 import SwiftUI
@@ -24,6 +25,7 @@ struct viewTutorial: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 40, height: 40)
+                    .foregroundColor(Color("Black"))
                 Spacer()
                 Spacer()
                 Text(tutorialDisplay.TutorialName)
@@ -67,7 +69,7 @@ struct TechEaseTutorialList: View {
                             .padding()
                             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                             .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("Black"))
                     }
                     //.padding(.top, 0)
                     .listStyle(PlainListStyle())

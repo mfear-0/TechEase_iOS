@@ -12,6 +12,7 @@
 		3F0F5B06262BC97C00446AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B05262BC97C00446AD2 /* Assets.xcassets */; };
 		3F0F5B09262BC97C00446AD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */; };
 		3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */; };
+		3FEBDF45265076CD006C9F4C /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBDF44265076CD006C9F4C /* HelpButton.swift */; };
 		3FEF5180263CD94E00237755 /* NotificationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF517F263CD94E00237755 /* NotificationsScreen.swift */; };
 		5FA4B4A0264DCC2800C357C3 /* OverviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */; };
 		5FB46C33263CBD4C008B809D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46C32263CBD4C008B809D /* CustomButton.swift */; };
@@ -33,6 +34,7 @@
 		3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F0F5B0A262BC97C00446AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
+		3FEBDF44265076CD006C9F4C /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
 		3FEF517F263CD94E00237755 /* NotificationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsScreen.swift; sourceTree = "<group>"; };
 		5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreen.swift; sourceTree = "<group>"; };
 		5FB46C32263CBD4C008B809D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -86,10 +88,10 @@
 				3F0F5B01262BC97B00446AD2 /* TechEaseApp.swift */,
 				3F0F5B03262BC97B00446AD2 /* ContentView.swift */,
 				5FB46C36263D9851008B809D /* DetailTutorial.swift */,
+				5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */,
 				3F0F5B05262BC97C00446AD2 /* Assets.xcassets */,
 				3F0F5B0A262BC97C00446AD2 /* Info.plist */,
 				3F0F5B07262BC97C00446AD2 /* Preview Content */,
-				5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */,
 			);
 			path = TechEase;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 				5FB46C39263D98FF008B809D /* TutorialModel.swift */,
 				5FB46C3F263D9A8D008B809D /* RoundedButton.swift */,
 				5FB46C41263DAB16008B809D /* ListOfTutorials.swift */,
+				3FEBDF44265076CD006C9F4C /* HelpButton.swift */,
 			);
 			path = ModelsAndCustomViews;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FEF5180263CD94E00237755 /* NotificationsScreen.swift in Sources */,
+				3FEBDF45265076CD006C9F4C /* HelpButton.swift in Sources */,
 				5FFDE810262FABCB00ADEEDF /* SettingsScreen.swift in Sources */,
 				3F0F5B04262BC97B00446AD2 /* ContentView.swift in Sources */,
 				3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */,
