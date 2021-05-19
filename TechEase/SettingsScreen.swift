@@ -18,6 +18,7 @@
 import SwiftUI
 
 struct SettingsScreen: View {
+    @EnvironmentObject var appState: AppState
     var body: some View {
 
             VStack() {
@@ -57,6 +58,11 @@ struct SettingsScreen: View {
                 Spacer()
             }
             .navigationBarTitle("Settings", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                self.appState.moveToDashboard = true
+            }) {
+                Text("Home")
+            })
             
         }
 }
