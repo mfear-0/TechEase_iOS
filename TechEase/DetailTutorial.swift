@@ -14,7 +14,7 @@ struct viewDetailTutorial: View{
     var body: some View{
         
         ZStack{
-            NavigationLink(destination: OverviewScreen(tutorialName: detailTutDisplay.TutorialName)){
+            NavigationLink(destination: OverviewScreen(tutorial: self.detailTutDisplay)){
                 
                 EmptyView()
                 

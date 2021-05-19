@@ -9,13 +9,13 @@ import SwiftUI
 
 struct OverviewScreen: View {
     
-    var tutorialName: String
+    var tutorial: Tutorial
     
     
     var body: some View {
         NavigationView{
             VStack(){
-                Text("The " + tutorialName + " Tutorial will teach you the following:")
+                Text("The " + tutorial.TutorialName + " Tutorial will teach you the following:")
                     .font(.title)
                     .foregroundColor(Color("DarkBlue"))
                     .padding([.top, .leading, .trailing], 12.0)
@@ -45,6 +45,6 @@ struct OverviewScreen: View {
 
 struct OverviewScreen_Previews: PreviewProvider {
     static var previews: some View {
-        OverviewScreen(tutorialName: "Texting")
+        OverviewScreen(tutorial: Tutorial(TutorialName: "Texting", Icon: "globe"))
     }
 }
