@@ -19,6 +19,7 @@
 import SwiftUI
 
 struct Accessibility: View {
+    @EnvironmentObject var appState: AppState
     var body: some View {
         
         VStack() {
@@ -114,6 +115,11 @@ struct Accessibility: View {
                 .padding()
                 .navigationBarTitle("Accessibility")
                 .buttonStyle(RoundedButton())
+                .navigationBarItems(trailing: Button(action: {
+                    self.appState.moveToDashboard = true
+                }) {
+                    Text("Home")
+                })
                 
             }
             

@@ -8,7 +8,14 @@
 
 import SwiftUI
 
+class AppState: ObservableObject {
+    @Published var moveToDashboard: Bool = false
+}
+
 struct Homepage: View {
+    
+    @EnvironmentObject var appState: AppState
+    @State var isView1Active: Bool = false
     
     init() {
         UINavigationBar.appearance().backgroundColor = UIColor.green
@@ -66,25 +73,35 @@ struct Homepage: View {
                     CustomButton(icon: "book", label: "Start Tutorials")
                         .padding()
                 }
+                .isDetailLink(false)
                 
                 NavigationLink(
-                    destination: SettingsScreen()){
+                    destination: SettingsScreen(), isActive: $isView1Active){
                     CustomButton(icon: "gearshape", label: "Settings")
                         .padding()
                 }
+                .isDetailLink(false)
                 Spacer()
                 
             }
             .padding(.top, 0)
             .listStyle(PlainListStyle())
             .navigationBarTitle("TechEase", displayMode: .inline)
-
+            .onReceive(self.appState.$moveToDashboard) { moveToDashboard in
+                if moveToDashboard {
+                    print("Move to dashboard: \(moveToDashboard)")
+                    self.isView1Active = false
+                    self.appState.moveToDashboard = false
+                }
+            }
         }
     }
 }
 
+
 struct Homepage_Previews: PreviewProvider {
     static var previews: some View {
         Homepage()
+            .environmentObject(AppState())
     }
 }

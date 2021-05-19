@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TechEaseApp: App {
+    @StateObject var environmentObject = AppState()
+    
     var body: some Scene {
         WindowGroup {
             Homepage()
+                .environmentObject(environmentObject)
         }
     }
 }
