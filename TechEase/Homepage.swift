@@ -4,6 +4,7 @@
 //
 //  Created by Natalman Nahm on 4/30/21.
 //  Modified by Arica Conrad on 5/15/21.
+//  Modified by Arica Conrad on 5/20/21.
 //
 
 import SwiftUI
@@ -44,7 +45,11 @@ struct Homepage: View {
                         .foregroundColor(Color("DarkBlue"))
                     Spacer()
                 }
-                .padding()
+                // Arica: This padding is necessary for the left and right sides of the instructional text.
+                .padding(10)
+                // Arica: This provides a bit more space above and below the instructional text.
+                .padding(.top, 20)
+                .padding(.bottom, 10)
                     
                 /*
                 
@@ -84,7 +89,6 @@ struct Homepage: View {
                 Spacer()
                 
             }
-            .padding(.top, 0)
             .listStyle(PlainListStyle())
             .navigationBarTitle("TechEase", displayMode: .inline)
             .onReceive(self.appState.$moveToDashboard) { moveToDashboard in

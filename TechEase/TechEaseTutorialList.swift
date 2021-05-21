@@ -5,6 +5,7 @@
 //  Created by Natalman Nahm on 4/20/21.
 //  Modified by Arica Conrad on 4/20/21.
 //  Modified by Arica Conrad on 5/15/21.
+//  Modified by Arica Conrad on 5/20/21.
 //
 
 import SwiftUI
@@ -57,12 +58,21 @@ struct TechEaseTutorialList: View {
 
                 VStack{
 
+                    /*
+                    
+                    Arica: This is the instructional text at the top of the screen.
+                     
+                    */
                     
                     Text("Tap a button below to view the tutorials in that group.")
                         .font(.title3)
                         .foregroundColor(Color("Black"))
                         .multilineTextAlignment(.leading)
+                        // Arica: This padding is necessary for the left and right sides of the instructional text.
                         .padding(10)
+                        // Arica: This provides a bit more space above and below the instructional text.
+                        .padding(.top, 20)
+                        .padding(.bottom, 10)
                     
                     List(tutorialList) { aTutorial in
                         viewTutorial(tutorialDisplay: aTutorial)
@@ -70,8 +80,10 @@ struct TechEaseTutorialList: View {
                             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                             .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
                             .foregroundColor(Color("Black"))
+                            // Arica: This padding provides a bit more space between the buttons.
+                            .padding(.top, 5)
+                            .padding(.bottom, 5)
                     }
-                    //.padding(.top, 0)
                     .listStyle(PlainListStyle())
 //                    .navigationBarItems(trailing:
 //                                            Button(action: {}, label: {

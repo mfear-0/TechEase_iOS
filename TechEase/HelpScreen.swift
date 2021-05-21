@@ -5,6 +5,7 @@
 //  Created by Hans Mandt on 4/21/21.
 //  Modified by Arica Conrad on 5/6/21.
 //  Modified by Arica Conrad on 5/16/21.
+//  Modified by Arica Conrad on 5/20/21.
 //
 
 import SwiftUI
@@ -50,7 +51,10 @@ struct HelpScreen: View {
                     // Arica: The Spacer pushes the title text to the left.
                     Spacer()
                 }
+                // Arica: This padding is necessary for providing enough space on the left side of the text.
                 .padding(.leading)
+                // Arica: This provides a bit more space above the first text so it is not as close to the navigation menu when the menu is implemented. Bottom padding is not necessary, unlike the other screens.
+                .padding(.top, 20)
                     
                 
                 Text("Tap the screen to press buttons. Swipe your finger up to scroll the page down, and swipe down to scroll the page up.")
