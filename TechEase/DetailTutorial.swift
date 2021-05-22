@@ -4,6 +4,7 @@
 //
 //  Created by Natalman Nahm on 5/1/21.
 //  Modified by Arica Conrad on 5/15/21.
+//  Modified by Arica Conrad on 5/20/21.
 //
 
 import SwiftUI
@@ -55,7 +56,11 @@ struct DetailTutorial: View {
                 .font(.title3)
                 .foregroundColor(Color("Black"))
                 .multilineTextAlignment(.leading)
+                // Arica: This padding is necessary for the left and right sides of the instructional text.
                 .padding(10)
+                // Arica: This provides a bit more space above and below the instructional text.
+                .padding(.top, 20)
+                .padding(.bottom, 10)
             
             List(detailTutorialList){
                 aTutorial in viewDetailTutorial(detailTutDisplay: aTutorial)
@@ -63,8 +68,10 @@ struct DetailTutorial: View {
                     .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
                     .foregroundColor(.black)
+                    // Arica: This padding provides a bit more space between the buttons.
+                    .padding(.top, 5)
+                    .padding(.bottom, 5)
             }
-            .padding(.top, 0)
             .listStyle(PlainListStyle())
             .navigationBarTitle("Tutorial Details", displayMode: .inline)
         }

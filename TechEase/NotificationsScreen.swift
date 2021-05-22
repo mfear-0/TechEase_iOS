@@ -3,6 +3,7 @@
 //  TechEase
 //
 //  Created by Arica Conrad on 4/30/21.
+//  Modified by Arica Conrad on 5/20/21.
 //
 
 import SwiftUI
@@ -22,7 +23,11 @@ struct NotificationsScreen: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
                 .foregroundColor(Color("DarkBlue"))
-                .padding()
+                // Arica: This padding is not as necessary for the left and right sides of the icon, but I am leaving it here for consistency.
+                .padding(10)
+                // Arica: This provides a bit more space above and below the instructional text.
+                .padding(.top, 20)
+                .padding(.bottom, 10)
             
             Text("There are no notifications at this time.")
                 .font(.title3)
