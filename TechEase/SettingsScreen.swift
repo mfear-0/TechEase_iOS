@@ -8,15 +8,9 @@
 //  Modified by Arica Conrad on 5/20/21.
 //
 
-/*
- 
- Arica:
- 
- @Natalman, if you need your code as a reference, I left it commented out at the bottom of this file. I didn't want to delete it in case you needed it to look back to. If you in fact don't need the code, feel free to delete it. I left comments saying where your code starts and ends.
- 
- */
 
 import SwiftUI
+import AVFoundation
 
 struct SettingsScreen: View {
     @EnvironmentObject var appState: AppState
