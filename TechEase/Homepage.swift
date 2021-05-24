@@ -5,9 +5,11 @@
 //  Created by Natalman Nahm on 4/30/21.
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
+//  Modified by Natalman Nahm on 5/22/21.
 //
 
 import SwiftUI
+import AVFoundation
 
 class AppState: ObservableObject {
     @Published var moveToDashboard: Bool = false
@@ -15,6 +17,7 @@ class AppState: ObservableObject {
 
 struct Homepage: View {
     
+    @State var action: Int?
     @EnvironmentObject var appState: AppState
     @State var isView1Active: Bool = false
     
@@ -74,21 +77,51 @@ struct Homepage: View {
                 */
                 
                 NavigationLink(
-                    destination: TechEaseTutorialList()){
-                    CustomButton(icon: "book", label: "Start Tutorials")
-                        .padding()
+                    destination: TechEaseTutorialList(), tag: 1, selection: $action){
+                    EmptyView()
                 }
                 .isDetailLink(false)
                 
                 NavigationLink(
-                    destination: SettingsScreen(), isActive: $isView1Active){
-                    CustomButton(icon: "gearshape", label: "Settings")
-                        .padding()
+                    destination: SettingsScreen(), tag: 2, selection: $action){
+                    EmptyView()
                 }
                 .isDetailLink(false)
+                
+                CustomButton(icon: "book", label: "Start Tutorials")
+                    .onTapGesture {
+                        
+                        self.action = 1
+                        let utterance = AVSpeechUtterance(string: "Start Tutorials button pressed")
+                        
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        
+                        utterance.rate = 0.5
+                        
+                        let synthesizer = AVSpeechSynthesizer()
+                        synthesizer.speak(utterance)
+                    }
+                    .padding()
+                
+                CustomButton(icon: "gearshape", label: "Settings")
+                    .onTapGesture {
+                        
+                        self.action = 2
+                        let utterance = AVSpeechUtterance(string: "Settings button pressed")
+                        
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        
+                        utterance.rate = 0.5
+                        
+                        let synthesizer = AVSpeechSynthesizer()
+                        synthesizer.speak(utterance)
+                    }
+                    .padding()
+                
                 Spacer()
                 
             }
+            .navigationBarItems(leading: SpeechButton(speech: "Welcome! Tap a button to access the tutorials or the settings. If you need help, tap the help button in the bottom right corner."))
             .listStyle(PlainListStyle())
             .navigationBarTitle("TechEase", displayMode: .inline)
             .onReceive(self.appState.$moveToDashboard) { moveToDashboard in
