@@ -173,6 +173,9 @@ struct Accessibility: View {
                     .buttonStyle(HelpButton())
                 }
             }
+            /*
+            .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
+            */
 
         }
         
