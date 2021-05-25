@@ -7,15 +7,8 @@
 //  Modified by Arica Conrad on 5/6/21.
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
+//  Modified by Natalman Nahm on 5/25/21
 //
-
-/*
- 
- Arica:
- 
- @Natalman, if you need your code as a reference, I left it commented out at the bottom of this file. I didn't want to delete it in case you needed it to look back to. If you in fact don't need the code, feel free to delete it. I left comments saying where your code starts and ends.
- 
- */
 
 import SwiftUI
 
@@ -53,7 +46,7 @@ struct Accessibility: View {
             ScrollView {
                 
                 Button(action: {
-                    // Nothing?
+                    speakButtonText(textToSpeak: "Text-to-Speech")
                 }) {
                     HStack{
                         Image(systemName: "hearingaid.ear")
@@ -76,7 +69,7 @@ struct Accessibility: View {
                 
                 
                 Button(action: {
-                    // Nothing?
+                    speakButtonText(textToSpeak: "Vision Options")
                 }) {
                     HStack{
                         Image(systemName: "eye")
@@ -99,7 +92,7 @@ struct Accessibility: View {
                 
                 
                 Button(action: {
-                    // Nothing?
+                    speakButtonText(textToSpeak: "Voice Commands")
                 }) {
                     HStack{
                         Image(systemName: "mic.fill")
@@ -123,13 +116,22 @@ struct Accessibility: View {
                 .navigationBarItems(trailing: Button(action: {
                     self.appState.moveToDashboard = true
                 }) {
-                    Text("Home")
+                    
+                    Text_to_SpeechButton(speech: "Tap a button to customize your accessibility options.")
+                        .padding(.trailing, 7.0)
+                    
+                    VStack {
+                        Image(systemName: "house")
+                            .foregroundColor(Color("Black"))
+                        Text("Home")
+                            .foregroundColor(Color("Black"))
+                    }
                 })
                 
             }
             
             /*
-            
+                        
             Arica: This is the code for showing the scroll icon, scroll text, and Help Button. If a screen does not scroll, you can comment out the swipe icon and text.
              
              VERY IMPORTANT!
@@ -154,7 +156,7 @@ struct Accessibility: View {
                     }
                     .padding(10)
                     */
-
+                    
                     Spacer()
                     
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -174,89 +176,9 @@ struct Accessibility: View {
             /*
             .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             */
+
         }
         
-        
-        
-        
-        
-        /*
-         //////////////////////////////
-         
-         Start of @Natalman's original code.
-         
-         //////////////////////////////
-         */
-        
-        /*
-        VStack(alignment: .center, spacing: 0.0){
-            Text("Tap a button to customize your accessibility options")
-                .multilineTextAlignment(.center)
-                .font(.system(size: 20.0))
-                .padding(.all, 24.0)
-            
-            Button(action: {}) {
-                HStack{
-                    Image(systemName: "hearingaid.ear")
-                        .resizable()
-                        .frame(width:28, height: 48)
-                    Text("Text-To-Speech")
-                        .padding(.leading, 28.0)
-                    Spacer()
-                }
-                .padding(.leading, 42.0)
-                
-            }
-                .padding([.leading, .bottom, .trailing], 28.0)
-                .buttonStyle(RoundedButton())
-            
-            Button(action: {}) {
-                HStack{
-                    Image(systemName: "eye")
-                        .resizable()
-                        .frame(width:52, height: 38)
-                    Text("Vision Options")
-                        .padding(.leading, 28.0)
-                    Spacer()
-                }
-                .padding(.leading, 42.0)
-                
-            }
-                .padding([.leading, .bottom, .trailing], 28.0)
-                .buttonStyle(RoundedButton())
-            
-            Button(action: {}) {
-                HStack{
-                    Image(systemName: "mic.fill")
-                        .resizable()
-                        .frame(width:32, height: 38)
-                    Text("Voice Commands")
-                        .padding(.leading, 28.0)
-                    Spacer()
-                }
-                .padding(.leading, 42.0)
-                
-            }
-                .padding([.leading, .bottom, .trailing], 28.0)
-                .buttonStyle(RoundedButton())
-            
-            
-            Spacer()
-            Button(action: {}) {
-                Text("Help")
-                    .padding()
-            }
-            .buttonStyle(HelpButton())
-        }
-        */
-        
-        /*
-         //////////////////////////////
-         
-         End of @Natalman's original code.
-         
-         //////////////////////////////
-         */
     }
 }
 

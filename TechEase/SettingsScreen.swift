@@ -6,6 +6,7 @@
 //  Modified by Arica Conrad on 4/30/21 and 5/1/21.
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
+//  Modified by Natalman Nahm on 5/24/21
 //
 
 
@@ -14,6 +15,7 @@ import AVFoundation
 
 struct SettingsScreen: View {
     @EnvironmentObject var appState: AppState
+    @State var action: Int?
     var body: some View {
 
             VStack() {
@@ -43,16 +45,27 @@ struct SettingsScreen: View {
                  
                  */
                 
-                NavigationLink(destination: Accessibility()) {
-                    CustomButton(icon: "figure.stand", label: "Accessibility")
-                    .padding()
-                    
+                NavigationLink(destination: Accessibility(), tag: 1, selection: $action) {
+                    EmptyView()
                 }
                     
-                NavigationLink(destination: NotificationsScreen()) {
-                    CustomButton(icon: "bell", label: "Notifications")
-                        .padding()
+                NavigationLink(destination: NotificationsScreen(), tag: 2, selection: $action) {
+                    EmptyView()
                 }
+                
+                CustomButton(icon: "figure.stand", label: "Accessibility")
+                .onTapGesture {
+                    self.action = 1
+                    speakButtonText(textToSpeak: "Accessibility")
+                }
+                .padding()
+                
+                CustomButton(icon: "bell", label: "Notifications")
+                .onTapGesture {
+                    self.action = 2
+                    speakButtonText(textToSpeak: "Notifications")
+                }
+                .padding()
                 
                 Spacer()
             }
@@ -60,6 +73,11 @@ struct SettingsScreen: View {
             .navigationBarItems(trailing: Button(action: {
                 self.appState.moveToDashboard = true
             }) {
+                
+                Text_to_SpeechButton(speech: "Tap a button to see accessibility options or notifications.")
+                    .padding(.trailing, 7.0)
+                
+                
                 VStack {
                     Image(systemName: "house")
                         .foregroundColor(Color("Black"))
@@ -70,7 +88,9 @@ struct SettingsScreen: View {
                 }
                 // Arica: This was @Mackenzie's original code.
                 //Text("Home")
-            })
+            }
+            .padding(.trailing, 3.0))
+
             
         }
 }

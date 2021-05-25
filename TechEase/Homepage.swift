@@ -90,16 +90,8 @@ struct Homepage: View {
                 
                 CustomButton(icon: "book", label: "Start Tutorials")
                     .onTapGesture {
-                        
                         self.action = 1
-                        let utterance = AVSpeechUtterance(string: "Start Tutorials button pressed")
-                        
-                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        
-                        utterance.rate = 0.5
-                        
-                        let synthesizer = AVSpeechSynthesizer()
-                        synthesizer.speak(utterance)
+                        speakButtonText(textToSpeak: "Start Tutorials")
                     }
                     .padding()
                 
@@ -107,21 +99,14 @@ struct Homepage: View {
                     .onTapGesture {
                         
                         self.action = 2
-                        let utterance = AVSpeechUtterance(string: "Settings button pressed")
-                        
-                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        
-                        utterance.rate = 0.5
-                        
-                        let synthesizer = AVSpeechSynthesizer()
-                        synthesizer.speak(utterance)
+                        speakButtonText(textToSpeak: "Settings")
                     }
                     .padding()
                 
                 Spacer()
                 
             }
-            .navigationBarItems(leading: SpeechButton(speech: "Welcome! Tap a button to access the tutorials or the settings. If you need help, tap the help button in the bottom right corner."))
+            .navigationBarItems(trailing: Text_to_SpeechButton(speech: "Welcome! Tap a button to access the tutorials or the settings. If you need help, tap the help button in the bottom right corner."))
             .listStyle(PlainListStyle())
             .navigationBarTitle("TechEase", displayMode: .inline)
             .onReceive(self.appState.$moveToDashboard) { moveToDashboard in
