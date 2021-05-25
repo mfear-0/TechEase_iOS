@@ -129,8 +129,32 @@ struct Accessibility: View {
                 
             }
             
+            /*
+                        
+            Arica: This is the code for showing the scroll icon, scroll text, and Help Button. If a screen does not scroll, you can comment out the swipe icon and text.
+             
+             VERY IMPORTANT!
+             On a screen that does not scroll, also comment out the styling at the end of the ZStack. It is not needed if we just have the Help Button (and an outline looks kind of odd without the scroll text).
+             
+            */
+            
             ZStack {
                 HStack {
+                    /*
+                    HStack {
+                        Image(systemName: "hand.draw")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .padding(10)
+                            .foregroundColor(Color("Black"))
+                        Text("Swipe up or down to see more content.")
+                            .font(.title3)
+                            .foregroundColor(Color("Black"))
+                            .multilineTextAlignment(.leading)
+                    }
+                    .padding(10)
+                    */
                     
                     Spacer()
                     
