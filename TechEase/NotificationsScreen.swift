@@ -41,6 +41,7 @@ struct NotificationsScreen: View {
              
             */
                 .navigationBarTitle("Notifications")
+                .navigationBarItems(trailing: Text_to_SpeechButton(speech: "There are no notifications at this time."))
             Spacer()
         }
     }
