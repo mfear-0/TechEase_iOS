@@ -11,6 +11,8 @@
 import SwiftUI
 
 struct viewTutorial: View {
+    @EnvironmentObject var appState: AppState
+    @State var action: Int?
     let tutorialDisplay: Tutorial
     
     var body: some View{
@@ -18,6 +20,7 @@ struct viewTutorial: View {
             NavigationLink(destination: DetailTutorial(detailTutorialList: self.getArrayListOfTut(tutName: tutorialDisplay.TutorialName) )){
                 EmptyView()
             }
+            .isDetailLink(false)
             .opacity(0)
             .buttonStyle(PlainButtonStyle())
             
@@ -37,6 +40,27 @@ struct viewTutorial: View {
                 Spacer()
             }
         }
+        .navigationBarTitle("Tutorials", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            self.appState.moveToDashboard = true
+        }) {
+            
+            Text_to_SpeechButton(speech: "Tap a button to see tutorials on this topic.")
+                .padding(.trailing, 7.0)
+            
+            
+            VStack {
+                Image(systemName: "house")
+                    .foregroundColor(Color("Black"))
+                Text("Home")
+                    .foregroundColor(Color("Black"))
+                    // Arica: It seems you actually can customize the font size, but it loses that bold look that is automatically applied to links in the navigation bar.
+                    //.font(.title3)
+            }
+            // Arica: This was @Mackenzie's original code.
+            //Text("Home")
+        }
+        .padding(.trailing, 3.0))
     }
     
     func getArrayListOfTut(tutName: String) -> Array<Tutorial> {
@@ -85,13 +109,7 @@ struct TechEaseTutorialList: View {
                             .padding(.bottom, 5)
                     }
                     .listStyle(PlainListStyle())
-//                    .navigationBarItems(trailing:
-//                                            Button(action: {}, label: {
-//                                                            NavigationLink(destination: Homepage()) {
-//                                                                Text("Home")
-//                                                            }
-//                                                        }))
-                    .navigationBarTitle("Tutorials", displayMode: .inline)
+                    
                 }
             }
 }

@@ -11,6 +11,8 @@
 import SwiftUI
 
 struct HelpScreen: View {
+    @EnvironmentObject var appState: AppState
+    @State var action: Int?
     var body: some View {
         
         VStack {
@@ -20,15 +22,15 @@ struct HelpScreen: View {
              
              */
             
-            Text("Help")
-               .font(.largeTitle)
-               .fontWeight(.regular)
-               .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-               .foregroundColor(Color("Black"))
-               .padding()
-               .border(Color("DarkYellow"), width: 2)
-               .background(Color("LightYellow"))
-               .padding()
+//            Text("Help")
+//               .font(.largeTitle)
+//               .fontWeight(.regular)
+//               .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+//               .foregroundColor(Color("Black"))
+//               .padding()
+//               .border(Color("DarkYellow"), width: 2)
+//               .background(Color("LightYellow"))
+//               .padding()
             
             /*
             
@@ -173,6 +175,25 @@ struct HelpScreen: View {
             }
             .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
         }
+        .navigationBarTitle("Notifications")
+        .navigationBarItems(trailing: Button(action: {
+            self.appState.moveToDashboard = true
+        }) {
+            
+            Text_to_SpeechButton(speech: "T.T.S. to be applied here later i guess.")
+                .padding(.trailing, 7.0)
+            
+            
+            VStack {
+                Image(systemName: "house")
+                    .foregroundColor(Color("Black"))
+                Text("Home")
+                    .foregroundColor(Color("Black"))
+                    // Arica: It seems you actually can customize the font size, but it loses that bold look that is automatically applied to links in the navigation bar.
+                    //.font(.title3)
+            }
+        }
+        .padding(.trailing, 3.0))
     }
 }
 

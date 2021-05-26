@@ -10,7 +10,10 @@
 import SwiftUI
 
 struct viewDetailTutorial: View{
+    @EnvironmentObject var appState: AppState
+    @State var action: Int?
     let detailTutDisplay: Tutorial
+    
     
     var body: some View{
         
@@ -20,6 +23,7 @@ struct viewDetailTutorial: View{
                 EmptyView()
                 
             }
+            .isDetailLink(false)
             .opacity(0)
             .buttonStyle(PlainButtonStyle())
             
@@ -39,6 +43,27 @@ struct viewDetailTutorial: View{
                 Spacer()
             }
         }
+        .navigationBarTitle("Details", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            self.appState.moveToDashboard = true
+        }) {
+            
+            Text_to_SpeechButton(speech: "Tap a button to see tutorials on this topic.")
+                .padding(.trailing, 7.0)
+            
+            
+            VStack {
+                Image(systemName: "house")
+                    .foregroundColor(Color("Black"))
+                Text("Home")
+                    .foregroundColor(Color("Black"))
+                    // Arica: It seems you actually can customize the font size, but it loses that bold look that is automatically applied to links in the navigation bar.
+                    //.font(.title3)
+            }
+            // Arica: This was @Mackenzie's original code.
+            //Text("Home")
+        }
+        .padding(.trailing, 3.0))
         
     }
     
@@ -73,7 +98,6 @@ struct DetailTutorial: View {
                     .padding(.bottom, 5)
             }
             .listStyle(PlainListStyle())
-            .navigationBarTitle("Tutorial Details", displayMode: .inline)
         }
         
     }
