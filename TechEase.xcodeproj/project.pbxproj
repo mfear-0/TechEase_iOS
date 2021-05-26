@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F029DB1265E01BF009BA7CC /* PhoneFeaturesTutorialsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F029DB0265E01BF009BA7CC /* PhoneFeaturesTutorialsContent.swift */; };
+		3F029DB3265E01EB009BA7CC /* AppsTutorialsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F029DB2265E01EB009BA7CC /* AppsTutorialsContent.swift */; };
+		3F029DB5265E039F009BA7CC /* InternetTutorialsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F029DB4265E039F009BA7CC /* InternetTutorialsContent.swift */; };
+		3F029DB7265E03B6009BA7CC /* SocialMediaTutorialsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F029DB6265E03B6009BA7CC /* SocialMediaTutorialsContent.swift */; };
 		3F0F5B02262BC97B00446AD2 /* TechEaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F5B01262BC97B00446AD2 /* TechEaseApp.swift */; };
 		3F0F5B04262BC97B00446AD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F5B03262BC97B00446AD2 /* ContentView.swift */; };
 		3F0F5B06262BC97C00446AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B05262BC97C00446AD2 /* Assets.xcassets */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F029DB0265E01BF009BA7CC /* PhoneFeaturesTutorialsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFeaturesTutorialsContent.swift; sourceTree = "<group>"; };
+		3F029DB2265E01EB009BA7CC /* AppsTutorialsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsTutorialsContent.swift; sourceTree = "<group>"; };
+		3F029DB4265E039F009BA7CC /* InternetTutorialsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetTutorialsContent.swift; sourceTree = "<group>"; };
+		3F029DB6265E03B6009BA7CC /* SocialMediaTutorialsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaTutorialsContent.swift; sourceTree = "<group>"; };
 		3F0F5AFE262BC97B00446AD2 /* TechEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0F5B01262BC97B00446AD2 /* TechEaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechEaseApp.swift; sourceTree = "<group>"; };
 		3F0F5B03262BC97B00446AD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F029DAF265E018D009BA7CC /* Tutorial Overview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3F029DB0265E01BF009BA7CC /* PhoneFeaturesTutorialsContent.swift */,
+				3F029DB2265E01EB009BA7CC /* AppsTutorialsContent.swift */,
+				3F029DB4265E039F009BA7CC /* InternetTutorialsContent.swift */,
+				3F029DB6265E03B6009BA7CC /* SocialMediaTutorialsContent.swift */,
+			);
+			path = "Tutorial Overview Content";
+			sourceTree = "<group>";
+		};
 		3F0F5AF5262BC97B00446AD2 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +103,7 @@
 		3F0F5B00262BC97B00446AD2 /* TechEase */ = {
 			isa = PBXGroup;
 			children = (
+				3F029DAF265E018D009BA7CC /* Tutorial Overview Content */,
 				5FB46C38263D98A8008B809D /* ModelsAndCustomViews */,
 				5FB46C34263CBF39008B809D /* Homepage.swift */,
 				5FFDE80F262FABCB00ADEEDF /* SettingsScreen.swift */,
@@ -201,11 +221,15 @@
 				3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */,
 				5FB46C3A263D98FF008B809D /* TutorialModel.swift in Sources */,
 				5FB46C37263D9851008B809D /* DetailTutorial.swift in Sources */,
+				3F029DB3265E01EB009BA7CC /* AppsTutorialsContent.swift in Sources */,
 				3FAB3AE426554C1000E207CA /* SceneDelegate.swift in Sources */,
 				5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */,
+				3F029DB5265E039F009BA7CC /* InternetTutorialsContent.swift in Sources */,
+				3F029DB1265E01BF009BA7CC /* PhoneFeaturesTutorialsContent.swift in Sources */,
 				5FB46C40263D9A8D008B809D /* RoundedButton.swift in Sources */,
 				5F51B5952659BF23001C97F9 /* Text_to_SpeechButton.swift in Sources */,
 				5FA4B4A0264DCC2800C357C3 /* OverviewScreen.swift in Sources */,
+				3F029DB7265E03B6009BA7CC /* SocialMediaTutorialsContent.swift in Sources */,
 				5FB46C33263CBD4C008B809D /* CustomButton.swift in Sources */,
 				5FB46C42263DAB16008B809D /* ListOfTutorials.swift in Sources */,
 				3F0F5B02262BC97B00446AD2 /* TechEaseApp.swift in Sources */,
