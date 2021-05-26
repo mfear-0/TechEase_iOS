@@ -48,10 +48,12 @@ struct SettingsScreen: View {
                 NavigationLink(destination: Accessibility(), tag: 1, selection: $action) {
                     EmptyView()
                 }
+                .isDetailLink(false)
                     
                 NavigationLink(destination: NotificationsScreen(), tag: 2, selection: $action) {
                     EmptyView()
                 }
+                .isDetailLink(false)
                 
                 CustomButton(icon: "figure.stand", label: "Accessibility")
                 .onTapGesture {
