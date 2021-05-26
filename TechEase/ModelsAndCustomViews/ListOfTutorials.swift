@@ -4,11 +4,12 @@
 //
 //  Created by Natalman Nahm on 5/1/21.
 //  Modified by Arica Conrad on 5/20/21.
+//  Modified by Arica Conrad on 5/25/21.
 //
 
 import Foundation
 
-// Arica: This list is for the categories of tutorials our app has.
+// MARK: The list of tutorial categories.
 
 let tutorialList = [
     Tutorial(TutorialName: "Phone Features", Icon: "iphone"),
@@ -18,7 +19,7 @@ let tutorialList = [
     
 ]
 
-// Arica: This list is for all the tutorials under the "Phone Features" category.
+// MARK: The list of tutorials under the Phone Features category.
 
 let phoneFeatureList = [
     Tutorial(TutorialName: "Contact List", Icon: "person.crop.circle"),
@@ -31,7 +32,7 @@ let phoneFeatureList = [
     Tutorial(TutorialName: "Settings", Icon: "gearshape")
 ]
 
-// Arica: This list is for all the tutorials under the "Apps" category.
+// MARK: The list of tutorials under the Apps category.
 
 let appList = [
     Tutorial(TutorialName: "Calendar", Icon: "calendar"),
@@ -44,7 +45,7 @@ let appList = [
     Tutorial(TutorialName: "Email", Icon: "envelope")
 ]
 
-// Arica: This list is for all the tutorials under the "Internet" category.
+// MARK: The list of tutorials under the Internet category.
 
 let internetList = [
     Tutorial(TutorialName: "Internet Basics", Icon: "globe"),
@@ -56,7 +57,7 @@ let internetList = [
     Tutorial(TutorialName: "Cookies", Icon: "info.circle")
 ]
 
-// Arica: This list is for all the tutorials under the "Social Media" category.
+// MARK: The list of tutorials under the Social Media category.
 
 let socialMediaList = [
     Tutorial(TutorialName: "Social Media Basics", Icon: "person.2.fill"),
