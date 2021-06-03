@@ -18,7 +18,7 @@ struct viewDetailTutorial: View{
     var body: some View{
         
         ZStack{
-            NavigationLink(destination: OverviewScreen(tutorial: self.detailTutDisplay)){
+            NavigationLink(destination: OverviewScreen(tutorial: self.detailTutDisplay), tag: 1, selection: $action){
                 
                 EmptyView()
                 
@@ -42,13 +42,17 @@ struct viewDetailTutorial: View{
                 Spacer()
                 Spacer()
             }
+            .onTapGesture {
+                self.action = 1
+                speakButtonText3(textToSpeak: detailTutDisplay.TutorialName)
+            }
         }
         .navigationBarTitle("Details", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
             self.appState.moveToDashboard = true
         }) {
             
-            Text_to_SpeechButton(speech: "Tap a button to see tutorials on this topic.")
+            Text_to_SpeechButton(speech: "Tap a button below to learn more about that tutorial.")
                 .padding(.trailing, 7.0)
             
             

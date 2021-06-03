@@ -18,3 +18,25 @@ func speakButtonText(textToSpeak: String) {
     let synthesizer = AVSpeechSynthesizer()
     synthesizer.speak(utterance)
 }
+
+func speakButtonText2(textToSpeak: String) {
+    let utterance = AVSpeechUtterance(string: textToSpeak + " tutorial group selected")
+    
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+    
+    utterance.rate = 0.5
+    
+    let synthesizer = AVSpeechSynthesizer()
+    synthesizer.speak(utterance)
+}
+
+func speakButtonText3(textToSpeak: String) {
+    let utterance = AVSpeechUtterance(string: textToSpeak + " tutorial selected")
+    
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+    
+    utterance.rate = 0.5
+    
+    let synthesizer = AVSpeechSynthesizer()
+    synthesizer.speak(utterance)
+}

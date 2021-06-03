@@ -19,7 +19,7 @@ struct OverviewScreen: View {
                 .font(.title)
                 .foregroundColor(Color("DarkBlue"))
                 .padding([.top, .leading, .trailing], 12.0)
-            Text("- Opening up Messaging App \n- Creating and Sending text message \n- Understanding the Keyboard \n- Replying to a text message \n- Creating and repying to a group chat \n- Sending images and videos through a text")
+            Text("- Opening up Messaging App \n- Creating and Sending text message \n- Understanding the Keyboard \n- Replying to a text message \n- Creating and replying to a group chat \n- Sending images and videos through a text")
                 .font(.title3)
                 .foregroundColor(Color("Black"))
                 .multilineTextAlignment(.leading)
@@ -28,11 +28,17 @@ struct OverviewScreen: View {
             
             
             NavigationLink(
-                destination: TechEaseTutorialList()){
-                CustomButton(icon: "play", label: "Start Tutorial")
-                    .padding()
+                destination: TechEaseTutorialList(), tag: 1, selection: $action){
+                EmptyView()
             }
             .isDetailLink(false)
+            
+            CustomButton(icon: "play", label: "Start Tutorial")
+            .onTapGesture {
+                self.action = 1
+                speakButtonText(textToSpeak: "Start Tutorial")
+            }
+            .padding()
             Spacer()
             
         }
@@ -43,7 +49,7 @@ struct OverviewScreen: View {
             self.appState.moveToDashboard = true
         }) {
             
-            Text_to_SpeechButton(speech: "Tap Start to begin this tutorial.")
+            Text_to_SpeechButton(speech: "The " + tutorial.TutorialName + " Tutorial will teach you the following:" + " Opening up Messaging app. Creating and Sending text message. Understanding the Keyboard. Replying to a text message. Creating and replying to a group chat. Sending images and videos through a text. " + "Tap the Start tutorial Button to begin the tutorial.")
                 .padding(.trailing, 7.0)
             
             
