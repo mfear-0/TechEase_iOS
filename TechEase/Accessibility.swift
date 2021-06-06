@@ -37,10 +37,7 @@ struct Accessibility: View {
                  
                  */
                 
-                // ARICA: ADDED "BELOW" TO THE TEXT.
-                
-                
-                Text("Tap a button below to customize your accessibility options.")
+                Text("Tap a button to customize your accessibility options.")
                     .font(.title3)
                     .foregroundColor(Color("Black"))
                     .multilineTextAlignment(.leading)
@@ -49,8 +46,6 @@ struct Accessibility: View {
                     // Arica: This provides a bit more space above and below the instructional text.
                     .padding(.top, 20)
                     .padding(.bottom, 10)
-                
-            
                 
                 /*
                  
