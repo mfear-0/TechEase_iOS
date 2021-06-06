@@ -7,6 +7,7 @@
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified by Natalman Nahm on 5/24/21
+//  Modified by Arica Conrad on 6/6/21.
 //
 
 
@@ -14,11 +15,23 @@ import SwiftUI
 import AVFoundation
 
 struct SettingsScreen: View {
+    
     @EnvironmentObject var appState: AppState
     @State var action: Int?
+    
     var body: some View {
-
-            VStack() {
+        
+        /*
+        
+        Arica: This ZStack is for the background color to ignore the safe area and color the entire background.
+         
+        */
+        
+        ZStack {
+            
+            Color("White").ignoresSafeArea()
+            
+            VStack {
             
                 /*
                  
@@ -92,9 +105,8 @@ struct SettingsScreen: View {
                 //Text("Home")
             }
             .padding(.trailing, 3.0))
-
-            
         }
+    }
 }
 
 struct SettingsScreen_Previews: PreviewProvider {
