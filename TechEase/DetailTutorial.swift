@@ -6,6 +6,7 @@
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified By Natalman Nahm on 06/05/21
+//  Modified by Arica Conrad on 6/6/21.
 //
 
 import SwiftUI
@@ -82,33 +83,61 @@ struct DetailTutorial: View {
     
     var detailTutorialList : Array<Tutorial>
     var tutId: Int
+    
+    /*
+    
+    Arica: This code is in the TechEaseTutorialList file as well. However, I couldn't get this init() function to work because of the PreviewProvider code at the bottom of the file. The parameters are affecting it.
+     
+     Interestingly, the init() function that does work in the DetailTutorial file affects this screen as well. If you take out the init() function in that file, both screens change in the same way.
+     
+     I am leaving this code commented out for now in the event I might be able to get it work. If it ends up not working in the future, I will take the code and this comment out.
+     
+    */
+    
+    /*
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().backgroundColor = .clear
+    }
+    */
+    
     var body: some View {
 
-        VStack{
-            
-            Text("Tap a button below to learn more about that tutorial.")
-                .font(.title3)
-                .foregroundColor(Color("Black"))
-                .multilineTextAlignment(.leading)
-                // Arica: This padding is necessary for the left and right sides of the instructional text.
-                .padding(10)
-                // Arica: This provides a bit more space above and below the instructional text.
-                .padding(.top, 20)
-                .padding(.bottom, 10)
-            
-            List(detailTutorialList.indices){
-                index in viewDetailTutorial(detailTutDisplay: detailTutorialList[index], index: index, tutId: tutId)
-                    .padding()
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-                    .foregroundColor(.black)
-                    // Arica: This padding provides a bit more space between the buttons.
-                    .padding(.top, 5)
-                    .padding(.bottom, 5)
-            }
-            .listStyle(PlainListStyle())
-        }
+        /*
         
+        Arica: This ZStack is for the background color to ignore the safe area and color the entire background.
+         
+        */
+        
+        ZStack {
+            
+            Color("White").ignoresSafeArea()
+            
+            VStack {
+                
+                Text("Tap a button below to learn more about that tutorial.")
+                    .font(.title3)
+                    .foregroundColor(Color("Black"))
+                    .multilineTextAlignment(.leading)
+                    // Arica: This padding is necessary for the left and right sides of the instructional text.
+                    .padding(10)
+                    // Arica: This provides a bit more space above and below the instructional text.
+                    .padding(.top, 20)
+                    .padding(.bottom, 10)
+                
+                List(detailTutorialList.indices){
+                    index in viewDetailTutorial(detailTutDisplay: detailTutorialList[index], index: index, tutId: tutId)
+                        .padding()
+                        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
+                        .foregroundColor(.black)
+                        // Arica: This padding provides a bit more space between the buttons.
+                        .padding(.top, 5)
+                        .padding(.bottom, 5)
+                }
+                .listStyle(PlainListStyle())
+            }
+        }
     }
 }
 
