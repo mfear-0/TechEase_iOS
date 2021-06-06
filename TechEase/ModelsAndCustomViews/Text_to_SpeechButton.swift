@@ -3,6 +3,7 @@
 //  TechEase
 //
 //  Created by Natalman Nahm on 5/22/21.
+//  Modified by Arica Conrad on 6/5/21.
 //
 
 import SwiftUI
@@ -24,9 +25,9 @@ struct Text_to_SpeechButton: View {
         }) {
             VStack{
                 Image(systemName: "mic.circle")
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("Black"))
                 Text("Speak")
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("Black"))
             }
             
             

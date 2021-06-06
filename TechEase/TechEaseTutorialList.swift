@@ -15,8 +15,10 @@ struct viewTutorial: View {
     @State var action: Int?
     let tutorialDisplay: Tutorial
     
-    var body: some View{
-        ZStack{
+    var body: some View {
+        
+        ZStack {
+            
             NavigationLink(destination: DetailTutorial(detailTutorialList: self.getArrayListOfTut(tutName: tutorialDisplay.TutorialName)), tag: 1, selection: $action){
                 EmptyView()
             }
@@ -82,45 +84,67 @@ struct viewTutorial: View {
 
 struct TechEaseTutorialList: View {
     
+    /*
+    
+     Arica: I added this when trying to change the background color of the list. This seems to change the background surrounding the list, so I decided to leave this code.
+     
+    */
+    
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
 
-                VStack{
-
-                    /*
-                    
-                    Arica: This is the instructional text at the top of the screen.
-                     
-                    */
-                    
-                    Text("Tap a button below to view the tutorials in that group.")
-                        .font(.title3)
+        /*
+ 
+         Arica: This ZStack is for the background color to ignore the safe area and color the entire background.
+         
+        */
+        
+        ZStack {
+            
+            Color("White").ignoresSafeArea()
+            
+            VStack {
+                
+                /*
+                
+                Arica: This is the instructional text at the top of the screen.
+                 
+                */
+                
+                Text("Tap a button below to view the tutorials in that group.")
+                    .font(.title3)
+                    .foregroundColor(Color("Black"))
+                    .multilineTextAlignment(.leading)
+                    // Arica: This padding is necessary for the left and right sides of the instructional text.
+                    .padding(10)
+                    // Arica: This provides a bit more space above and below the instructional text.
+                    .padding(.top, 20)
+                    .padding(.bottom, 10)
+                
+                List(tutorialList) { aTutorial in
+                    viewTutorial(tutorialDisplay: aTutorial)
+                        .padding()
+                        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
                         .foregroundColor(Color("Black"))
-                        .multilineTextAlignment(.leading)
-                        // Arica: This padding is necessary for the left and right sides of the instructional text.
-                        .padding(10)
-                        // Arica: This provides a bit more space above and below the instructional text.
-                        .padding(.top, 20)
-                        .padding(.bottom, 10)
-                    
-                    List(tutorialList) { aTutorial in
-                        viewTutorial(tutorialDisplay: aTutorial)
-                            .padding()
-                            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                            .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-                            .foregroundColor(Color("Black"))
-                            // Arica: This padding provides a bit more space between the buttons.
-                            .padding(.top, 5)
-                            .padding(.bottom, 5)
-                    }
-                    .listStyle(PlainListStyle())
-                    
+                        // Arica: This padding provides a bit more space between the buttons.
+                        .padding(.top, 5)
+                        .padding(.bottom, 5)
                 }
+                .listStyle(PlainListStyle())
             }
+        }
+    }
 }
 
 struct TechEaseTutorialList_Previews: PreviewProvider {
     static var previews: some View {
         TechEaseTutorialList()
+            .preferredColorScheme(.dark)
     }
 }
 
