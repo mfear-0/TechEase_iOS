@@ -6,6 +6,7 @@
 //  Modified by Arica Conrad on 4/20/21.
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
+//  Modified By Natalman Nahm on 06/05/21
 //
 
 import SwiftUI
@@ -17,7 +18,7 @@ struct viewTutorial: View {
     
     var body: some View{
         ZStack{
-            NavigationLink(destination: DetailTutorial(detailTutorialList: self.getArrayListOfTut(tutName: tutorialDisplay.TutorialName)), tag: 1, selection: $action){
+            NavigationLink(destination: DetailTutorial(detailTutorialList: self.getArrayListOfTut(tutName: tutorialDisplay.TutorialName), tutId: getId(tutName: tutorialDisplay.TutorialName)), tag: 1, selection: $action){
                 EmptyView()
             }
             .isDetailLink(false)
@@ -76,6 +77,18 @@ struct viewTutorial: View {
            return internetList
         } else {
             return socialMediaList
+        }
+    }
+    
+    func getId (tutName: String) -> Int {
+        if tutName == "Phone Features" {
+            return 0
+        } else if tutName == "Apps" {
+            return 1
+        } else if tutName == "Internet" {
+           return 2
+        } else {
+            return 3
         }
     }
 }

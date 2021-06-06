@@ -5,6 +5,7 @@
 //  Created by Natalman Nahm on 5/1/21.
 //  Modified by Arica Conrad on 5/15/21.
 //  Modified by Arica Conrad on 5/20/21.
+//  Modified By Natalman Nahm on 06/05/21
 //
 
 import SwiftUI
@@ -13,12 +14,14 @@ struct viewDetailTutorial: View{
     @EnvironmentObject var appState: AppState
     @State var action: Int?
     let detailTutDisplay: Tutorial
+    let index: Int
+    let tutId: Int
     
     
     var body: some View{
         
         ZStack{
-            NavigationLink(destination: OverviewScreen(tutorial: self.detailTutDisplay), tag: 1, selection: $action){
+            NavigationLink(destination: OverviewScreen(tutorial: self.detailTutDisplay, index: self.index, tutId: self.tutId), tag: 1, selection: $action){
                 
                 EmptyView()
                 
@@ -73,10 +76,12 @@ struct viewDetailTutorial: View{
     
 }
 
+
+
 struct DetailTutorial: View {
     
     var detailTutorialList : Array<Tutorial>
-    
+    var tutId: Int
     var body: some View {
 
         VStack{
@@ -91,8 +96,8 @@ struct DetailTutorial: View {
                 .padding(.top, 20)
                 .padding(.bottom, 10)
             
-            List(detailTutorialList){
-                aTutorial in viewDetailTutorial(detailTutDisplay: aTutorial)
+            List(detailTutorialList.indices){
+                index in viewDetailTutorial(detailTutDisplay: detailTutorialList[index], index: index, tutId: tutId)
                     .padding()
                     .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
@@ -109,6 +114,6 @@ struct DetailTutorial: View {
 
 struct DetailTutorial_Previews: PreviewProvider {
     static var previews: some View {
-        DetailTutorial(detailTutorialList: appList)
+        DetailTutorial(detailTutorialList: appList, tutId: 1)
     }
 }
