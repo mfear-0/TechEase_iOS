@@ -3,6 +3,7 @@
 //  TechEase
 //
 //  Created by Natalman Nahm on 5/13/21.
+//  Modified By Natalman Nahm on 06/05/21
 //
 
 import SwiftUI
@@ -11,6 +12,8 @@ struct OverviewScreen: View {
     @EnvironmentObject var appState: AppState
     @State var action: Int?
     var tutorial: Tutorial
+    var index: Int
+    var tutId: Int
     
     
     var body: some View {
@@ -19,12 +22,19 @@ struct OverviewScreen: View {
                 .font(.title)
                 .foregroundColor(Color("DarkBlue"))
                 .padding([.top, .leading, .trailing], 12.0)
-            Text("- Opening up Messaging App \n- Creating and Sending text message \n- Understanding the Keyboard \n- Replying to a text message \n- Creating and replying to a group chat \n- Sending images and videos through a text")
-                .font(.title3)
-                .foregroundColor(Color("Black"))
-                .multilineTextAlignment(.leading)
-                .padding(10)
-                .padding(.bottom, 60)
+            
+            VStack(alignment: .leading){
+                
+                ForEach(getOverViewContent(index: index, tutId: tutId).indices) {
+                    i in
+                    Text("- " + (self.getOverViewContent(index: index, tutId: tutId)[i]) + "\n")
+                        .font(.title2)
+                        .foregroundColor(Color("Black"))
+                        .padding(.leading)
+                }
+            }
+            .padding(.top, 5.0)
+            
             
             
             NavigationLink(
@@ -66,10 +76,44 @@ struct OverviewScreen: View {
         }
         .padding(.trailing, 3.0))
     }
+    
+    func getOverViewContent (index: Int, tutId: Int) -> Array<String> {
+        
+        var overview = [[""]]
+        var content = [""]
+        
+        if tutId == 0 {
+            overview = phoneFeaturesOverview
+            content = getIndexContent(index: index, contents: overview)
+        } else if tutId == 1{
+            overview = appsOverview
+            return getIndexContent(index: index, contents: overview)
+        } else if tutId == 2 {
+            overview = internetOverview
+            return getIndexContent(index: index, contents: overview)
+        } else if tutId == 3 {
+            overview = socialMediaOverview
+            return getIndexContent(index: index, contents: overview)
+        }
+        
+        return content
+    }
+    
+    func getIndexContent(index: Int, contents: Array<Array<String>>) -> Array<String>{
+        
+        var contentOverview = [""]
+        
+        for content in contents {
+            if contents.firstIndex(of: content) == index {
+                contentOverview = content
+            }
+        }
+        return contentOverview
+    }
 }
 
 struct OverviewScreen_Previews: PreviewProvider {
     static var previews: some View {
-        OverviewScreen(tutorial: Tutorial(TutorialName: "Texting", Icon: "globe"))
+        OverviewScreen(tutorial: Tutorial(TutorialName: "Texting", Icon: "globe"), index: 1, tutId: 1)
     }
 }
