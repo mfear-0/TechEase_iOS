@@ -1,0 +1,19 @@
+The Compass Tutorial
+Opening the Compass app
+To open the Compass app, first locate the Compass app on your phone. It should already be installed. The Compass app’s icon looks like the face of a compass, and the app has the name “Compass” below the icon.
+Now tap the icon to open the app.
+Once the Compass app is open, you should see a screen that resembles the face of a compass with some data about your current location below it.
+The top half of the screen shows the cardinal directions of north, east, south, and west in a 360-degree circle.
+Zero degrees north is depicted as a red triangle pointing to “0” (zero).
+The direction your phone is facing is shown as a thick white line extending from the circle of degrees.
+The bottom half of the screen describes your geographical location. 
+The direction your phone is facing and the degree value of that direction is listed first.
+Next is the latitude and longitude coordinates of your location. The city and state you are currently located in may be displayed underneath these coordinates if your phone is able to identify that information.
+Finally, the elevation of your current location is listed.
+To change the direction your phone is facing, first place your phone flat in the palm of your hand with the screen facing up. Next, while keeping the phone flat in your palm, slowly move your arm in a half-circle. Notice how the thick white line showing your phone’s current direction has moved around the circle of degrees. Also notice that the direction listed at the bottom half of the screen changed to reflect where the thick white line is now. Try and see if you can make the thick white line complete a 360-degree rotation.
+While rotating your phone, you may notice your phone producing vibrations. Your phone produces vibrations after passing every 30 degrees, and a more pronounced vibration is produced after passing zero degrees. This tactile sensation is a normal function when using the Compass app.
+To lock your current direction, tap on the thick white line denoting your current position on the compass face. Once your current direction is locked, try moving your phone around to change the direction. Notice how a thick red band appears in the inner circle of the compass. This red band is to show you how far off you are from your locked direction. Remember that your locked direction is the bolded degree number, and your current direction is the thick white line. Your current direction is also shown beneath the compass face.
+Locating your current position
+To locate your current position on a map, tap the latitude and longitude coordinates near the bottom of the Compass screen. Your Maps app should then open, displaying your current location on a map. Since you are now in a different app, you will have to switch apps if you want to go back to the Compass app.
+For more information about the Maps app, see the Maps tutorial.
+You have reached the end of the tutorial. What would you like to do next?
