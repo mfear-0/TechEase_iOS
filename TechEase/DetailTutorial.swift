@@ -137,6 +137,45 @@ struct DetailTutorial: View {
                 }
                 .listStyle(PlainListStyle())
             }
+
+            .listStyle(PlainListStyle())
+            
+            ZStack {
+                HStack {
+                    HStack {
+                        Image(systemName: "hand.draw")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .padding(10)
+                            .foregroundColor(Color("Black"))
+                        Text("Swipe up or down to see more content.")
+                            .font(.title3)
+                            .foregroundColor(Color("Black"))
+                            .multilineTextAlignment(.leading)
+                    }
+                    .padding(10)
+
+                    Spacer()
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        VStack {
+                            Image(systemName: "questionmark")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                            Text("Help")
+                                .font(.title2)
+                                .foregroundColor(Color("Black"))
+                        }
+                    })
+                    .buttonStyle(HelpButton())
+                }
+            }
+            .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
+                    
+
+
         }
     }
 }
