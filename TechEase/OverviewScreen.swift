@@ -34,34 +34,55 @@ struct OverviewScreen: View {
                 Text("The " + tutorial.TutorialName + " Tutorial will teach you the following:")
                     .font(.title)
                     .foregroundColor(Color("DarkBlue"))
-                    .padding([.top, .leading, .trailing], 12.0)
+                    .multilineTextAlignment(.leading)
+                    .padding(10)
+                    .padding(.top, 20)
+                    .padding(.bottom, 10)
                 
-                VStack(alignment: .leading){
-                    
-                    ForEach(getOverViewContent(index: index, tutId: tutId).indices) {
-                        i in
-                        Text("- " + (self.getOverViewContent(index: index, tutId: tutId)[i]) + "\n")
-                            .font(.title2)
-                            .foregroundColor(Color("Black"))
-                            .padding(.leading)
+                /*
+                
+                Arica: I added the ScrollView in case the screen size is small and the list is long. The "Start Tutorial" button is within the ScrollView as well. This also prevents the text from being cut off on smaller screen sizes.
+                 
+                */
+                
+                ScrollView {
+
+                    VStack {
+                        /*
+                        
+                        Arica: Natalman's original code had + "\n" at the end of the Text in the foreach loop. I am leaving this as a reminder in case we need to use it again.
+                         
+                        */
+
+                        ForEach(getOverViewContent(index: index, tutId: tutId).indices) {
+                            i in
+                            
+                            HStack {
+                                Text("- " + (self.getOverViewContent(index: index, tutId: tutId)[i]))
+                                    .font(.title2)
+                                    .foregroundColor(Color("Black"))
+                                    .padding(.leading, 20)
+                                Spacer()
+                            }
+                            .padding(.bottom, 3)
+                        }
                     }
+                    .padding(.bottom, 20)
+                    
+                    NavigationLink(
+                        destination: TechEaseTutorialList(), tag: 1, selection: $action){
+                        EmptyView()
+                    }
+                    .isDetailLink(false)
+                    
+                    CustomButton(icon: "play", label: "Start Tutorial")
+                    .onTapGesture {
+                        self.action = 1
+                        speakButtonText(textToSpeak: "Start Tutorial")
+                    }
+                    .padding()
+                    Spacer()
                 }
-                .padding(.top, 5.0)
-                
-                NavigationLink(
-                    destination: TechEaseTutorialList(), tag: 1, selection: $action){
-                    EmptyView()
-                }
-                .isDetailLink(false)
-                
-                CustomButton(icon: "play", label: "Start Tutorial")
-                .onTapGesture {
-                    self.action = 1
-                    speakButtonText(textToSpeak: "Start Tutorial")
-                }
-                .padding()
-                Spacer()
-                
             }
             .padding(.top, 0)
             .listStyle(PlainListStyle())
