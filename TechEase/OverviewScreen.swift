@@ -14,27 +14,49 @@ struct OverviewScreen: View {
     
     
     var body: some View {
-        VStack(){
-            Text("The " + tutorial.TutorialName + " Tutorial will teach you the following:")
-                .font(.title)
-                .foregroundColor(Color("DarkBlue"))
-                .padding([.top, .leading, .trailing], 12.0)
-            Text("- Opening up Messaging App \n- Creating and Sending text message \n- Understanding the Keyboard \n- Replying to a text message \n- Creating and repying to a group chat \n- Sending images and videos through a text")
-                .font(.title3)
-                .foregroundColor(Color("Black"))
-                .multilineTextAlignment(.leading)
-                .padding(10)
-                .padding(.bottom, 60)
-            
-            
-            NavigationLink(
-                destination: TechEaseTutorialList()){
-                CustomButton(icon: "play", label: "Start Tutorial")
-                    .padding()
+        VStack {
+            VStack(){
+                ScrollView {
+                Text("The " + tutorial.TutorialName + " Tutorial will teach you the following:")
+                    .font(.title)
+                    .foregroundColor(Color("DarkBlue"))
+                    .padding([.top, .leading, .trailing], 12.0)
+                Text("- Opening up Messaging App \n- Creating and Sending text message \n- Understanding the Keyboard \n- Replying to a text message \n- Creating and repying to a group chat \n- Sending images and videos through a text")
+                    .font(.title3)
+                    .foregroundColor(Color("Black"))
+                    .multilineTextAlignment(.leading)
+                    //.padding(10)
+                    //.padding(.bottom, 60)
+                
+                
+                NavigationLink(
+                    destination: TechEaseTutorialList()){
+                    CustomButton(icon: "play", label: "Start Tutorial")
+                        .padding()
+                }
+                .isDetailLink(false)
             }
-            .isDetailLink(false)
-            Spacer()
-            
+        }
+            ZStack {
+                HStack {
+                    
+                    Spacer()
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        VStack {
+                            Image(systemName: "questionmark")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                            Text("Help")
+                                .font(.title2)
+                                .foregroundColor(Color("Black"))
+                        }
+                    })
+                    .buttonStyle(HelpButton())
+                }
+            }
+                    
         }
         .padding(.top, 0)
         .listStyle(PlainListStyle())
@@ -59,6 +81,7 @@ struct OverviewScreen: View {
             //Text("Home")
         }
         .padding(.trailing, 3.0))
+        
     }
 }
 

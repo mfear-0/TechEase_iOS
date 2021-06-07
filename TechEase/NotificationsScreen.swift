@@ -37,6 +37,26 @@ struct NotificationsScreen: View {
                 .multilineTextAlignment(.leading)
                 .padding(10)
             
+            ZStack {
+                HStack {
+                    
+                Spacer()
+            
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        VStack {
+                            Image(systemName: "questionmark")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                            Text("Help")
+                                .font(.title2)
+                                .foregroundColor(Color("Black"))
+                        }
+                    })
+                    .buttonStyle(HelpButton())
+                }
+            }
+            
             /*
             
              Arica: A Spacer to push everything to the top of the screen.

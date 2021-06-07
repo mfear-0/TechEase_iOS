@@ -160,14 +160,8 @@ struct Accessibility: View {
                     */
                     
                     Spacer()
-//                    NavigationLink(
-//                        destination: HelpScreen(), tag: 1, selection: $action){
-//                        EmptyView()
-//                    }
-//                    .isDetailLink(false)
-                    // I tried to get the help button working to test the navbar stuff, but couldn't quite get it done. -mfear
                     
-                    Button(action: {self.action = 1}, label: {
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                         VStack {
                             Image(systemName: "questionmark")
                                 .resizable()
@@ -179,6 +173,12 @@ struct Accessibility: View {
                         }
                     })
                     .buttonStyle(HelpButton())
+//                    NavigationLink(
+//                        destination: HelpScreen(), tag: 1, selection: $action){
+//                        EmptyView()
+//                    }
+//                    .isDetailLink(false)
+                    // I tried to get the help button working to test the navbar stuff, but couldn't quite get it done. -mfear
                     
                 }
             }
