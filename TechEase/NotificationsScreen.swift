@@ -15,70 +15,6 @@ struct NotificationsScreen: View {
     @State var action: Int?
     
     var body: some View {
-
-        VStack {
-            
-            /*
-             
-             Arica: This is the instructional text that describes if the user has any notifications right now. We had this screen in our Android app, so I thought it would be good to have here too. Above the text is the bell icon for notifications, and it is colored dark blue.
-             
-             */
-            
-            Image(systemName: "bell")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40)
-                .foregroundColor(Color("DarkBlue"))
-                // Arica: This padding is not as necessary for the left and right sides of the icon, but I am leaving it here for consistency.
-                .padding(10)
-                // Arica: This provides a bit more space above and below the instructional text.
-                .padding(.top, 20)
-                .padding(.bottom, 10)
-            
-            Text("There are no notifications at this time.")
-                .font(.title3)
-                .foregroundColor(Color("Black"))
-                .multilineTextAlignment(.leading)
-                .padding(10)
-            
-            ZStack {
-                HStack {
-                    
-                Spacer()
-            
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        VStack {
-                            Image(systemName: "questionmark")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                            Text("Help")
-                                .font(.title2)
-                                .foregroundColor(Color("Black"))
-                        }
-                    })
-                    .buttonStyle(HelpButton())
-                }
-            }
-            
-            /*
-            
-             Arica: A Spacer to push everything to the top of the screen.
-             
-            */
-                .navigationBarTitle("Notifications")
-//                .navigationBarItems(trailing: Text_to_SpeechButton(speech: "There are no notifications at this time."))
-
-                
-            Spacer()
-        }
-        .navigationBarItems(trailing: Button(action: {
-            self.appState.moveToDashboard = true
-        }) {
-            
-            Text_to_SpeechButton(speech: "There are no notifications at this time.")
-                .padding(.trailing, 7.0)
-
         
         /*
         
@@ -87,7 +23,6 @@ struct NotificationsScreen: View {
         */
         
         ZStack {
-
             
             Color("White").ignoresSafeArea()
             
