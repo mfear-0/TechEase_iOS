@@ -3,6 +3,7 @@
 //  TechEase
 //
 //  Created by Natalman Nahm on 5/22/21.
+//  Modified by Arica Conrad on 6/6/21.
 //
 
 import SwiftUI
@@ -11,9 +12,25 @@ import AVFoundation
 struct Text_to_SpeechButton: View {
     
     var speech: String
+    var audioContent: Array<String>?
+    var otherAudio: String?
     var body: some View {
         Button(action: {
-            let utterance = AVSpeechUtterance(string: speech)
+            
+            var playAudio = ""
+            var utterance = AVSpeechUtterance()
+            
+            for content in audioContent ?? [String]() {
+                playAudio = playAudio + content + " "
+            }
+            
+            
+            if playAudio == "" && otherAudio == nil {
+                utterance = AVSpeechUtterance(string: speech)
+
+            } else {
+                utterance = AVSpeechUtterance(string: (speech + " " + playAudio + " " + otherAudio!))
+            }
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             
             utterance.rate = 0.5
@@ -24,12 +41,10 @@ struct Text_to_SpeechButton: View {
         }) {
             VStack{
                 Image(systemName: "mic.circle")
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("Black"))
                 Text("Speak")
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("Black"))
             }
-            
-            
         }
     }
 }

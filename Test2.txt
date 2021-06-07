@@ -1,0 +1,5 @@
+Text from txt file test 2
+
+Second line with line break before. 
+
+*asterisk line.
