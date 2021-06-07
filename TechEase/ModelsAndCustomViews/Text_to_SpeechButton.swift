@@ -18,12 +18,19 @@ struct Text_to_SpeechButton: View {
         Button(action: {
             
             var playAudio = ""
+            var utterance = AVSpeechUtterance()
             
             for content in audioContent ?? [String]() {
                 playAudio = playAudio + content + " "
             }
             
-            let utterance = AVSpeechUtterance(string: (speech + " " + playAudio + " " + otherAudio!))
+            
+            if playAudio == "" && otherAudio == nil {
+                utterance = AVSpeechUtterance(string: speech)
+
+            } else {
+                utterance = AVSpeechUtterance(string: (speech + " " + playAudio + " " + otherAudio!))
+            }
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             
             utterance.rate = 0.5
