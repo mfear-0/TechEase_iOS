@@ -104,20 +104,12 @@ struct Accessibility: View {
                     .padding()
                     .buttonStyle(RoundedButton())
                     
-
-                    Spacer()
-                    
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        VStack {
-                            Image(systemName: "questionmark")
-
                     
                     Button(action: {
                         speakButtonText(textToSpeak: "Voice Commands")
                     }) {
                         HStack{
                             Image(systemName: "mic.fill")
-
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 40, height: 40)
@@ -149,15 +141,6 @@ struct Accessibility: View {
                                 .foregroundColor(Color("Black"))
                         }
                     })
-
-                    .buttonStyle(HelpButton())
-//                    NavigationLink(
-//                        destination: HelpScreen(), tag: 1, selection: $action){
-//                        EmptyView()
-//                    }
-//                    .isDetailLink(false)
-                    // I tried to get the help button working to test the navbar stuff, but couldn't quite get it done. -mfear
-
                     
                 }
                 

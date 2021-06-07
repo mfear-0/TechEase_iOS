@@ -146,65 +146,9 @@ struct TechEaseTutorialList: View {
                         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                         .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
                         .foregroundColor(Color("Black"))
-
-                        .multilineTextAlignment(.leading)
-                        // Arica: This padding is necessary for the left and right sides of the instructional text.
-                        .padding(10)
-                        // Arica: This provides a bit more space above and below the instructional text.
-                        .padding(.top, 20)
-                        .padding(.bottom, 10)
-                    
-                    List(tutorialList) { aTutorial in
-                        viewTutorial(tutorialDisplay: aTutorial)
-                            .padding()
-                            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                            .background(RoundedRectangle(cornerRadius: 10).stroke(Color("DarkBlue"), lineWidth: 2).background(Color("LightBlue").cornerRadius(10)))
-                            .foregroundColor(Color("Black"))
-                            // Arica: This padding provides a bit more space between the buttons.
-                            .padding(.top, 5)
-                            .padding(.bottom, 5)
-                    }
-                    .listStyle(PlainListStyle())
-                    
-                    ZStack {
-                        HStack {
-                            HStack {
-                                Image(systemName: "hand.draw")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40, height: 40)
-                                    .padding(10)
-                                    .foregroundColor(Color("Black"))
-                                Text("Swipe up or down to see more content.")
-                                    .font(.title3)
-                                    .foregroundColor(Color("Black"))
-                                    .multilineTextAlignment(.leading)
-                            }
-                            .padding(10)
-
-                            Spacer()
-                            
-                            
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                VStack {
-                                    Image(systemName: "questionmark")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 40, height: 40)
-                                    Text("Help")
-                                        .font(.title2)
-                                        .foregroundColor(Color("Black"))
-                                }
-                            })
-                            .buttonStyle(HelpButton())
-                            
-                        }
-                    }
-
                         // Arica: This padding provides a bit more space between the buttons.
                         .padding(.top, 5)
                         .padding(.bottom, 5)
-
                 }
                 .listStyle(PlainListStyle())
             }
