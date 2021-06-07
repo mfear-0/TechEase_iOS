@@ -12,9 +12,18 @@ import AVFoundation
 struct Text_to_SpeechButton: View {
     
     var speech: String
+    var audioContent: Array<String>?
+    var otherAudio: String?
     var body: some View {
         Button(action: {
-            let utterance = AVSpeechUtterance(string: speech)
+            
+            var playAudio = ""
+            
+            for content in audioContent ?? [String]() {
+                playAudio = playAudio + content + " "
+            }
+            
+            let utterance = AVSpeechUtterance(string: (speech + " " + playAudio + " " + otherAudio!))
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             
             utterance.rate = 0.5

@@ -87,24 +87,28 @@ struct OverviewScreen: View {
             .padding(.top, 0)
             .listStyle(PlainListStyle())
             .navigationBarTitle("Overview", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                self.appState.moveToDashboard = true
-            }) {
-                
-                Text_to_SpeechButton(speech: "The " + tutorial.TutorialName + " Tutorial will teach you the following:" + " Opening up Messaging app. Creating and Sending text message. Understanding the Keyboard. Replying to a text message. Creating and replying to a group chat. Sending images and videos through a text. " + "Tap the Start tutorial Button to begin the tutorial.")
-                    .padding(.trailing, 7.0)
-                
-                
-                VStack {
-                    Image(systemName: "house")
-                        .foregroundColor(Color("Black"))
-                    Text("Home")
-                        .foregroundColor(Color("Black"))
-                        // Arica: It seems you actually can customize the font size, but it loses that bold look that is automatically applied to links in the navigation bar.
-                        //.font(.title3)
-                }
-                // Arica: This was @Mackenzie's original code.
-                //Text("Home")
+            .navigationBarItems( trailing:
+                                    
+                HStack {
+                    Text_to_SpeechButton(speech: "The " + tutorial.TutorialName + " Tutorial will teach you the following:", audioContent: getOverViewContent(index: index, tutId: tutId), otherAudio: "Tap the Start tutorial Button to begin the tutorial.")
+                        .padding(.trailing, 7.0)
+                    
+                    Button(action: {
+                    
+                    self.appState.moveToDashboard = true
+                    
+                    }) {
+                        VStack {
+                            Image(systemName: "house")
+                                .foregroundColor(Color("Black"))
+                            Text("Home")
+                                .foregroundColor(Color("Black"))
+                                // Arica: It seems you actually can customize the font size, but it loses that bold look that is automatically applied to links in the navigation bar.
+                                //.font(.title3)
+                        }
+                        // Arica: This was @Mackenzie's original code.
+                        //Text("Home")
+                    }
             }
             .padding(.trailing, 3.0))
         }
