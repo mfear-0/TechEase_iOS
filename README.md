@@ -10,6 +10,7 @@ As of June 8th 2021, our current completed app meets the following MVP requireme
 * A help button available on every page.
 * Some accessibility options, including text-to-speech and dark mode.
 * Dynamically loading tutorial lists that cover the most important apps and functions.
+
 While some of these will continue to evolve as we continue to work on the app, in its current state these requirements are mostly met and their implementations are functional. Remaining MVP tasks are listed below. 
 
 
