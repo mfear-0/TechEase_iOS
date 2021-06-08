@@ -13,6 +13,19 @@ As of June 8th 2021, our current completed app meets the following MVP requireme
 
 While some of these will continue to evolve as we continue to work on the app, in its current state these requirements are mostly met and their implementations are functional. Remaining MVP tasks are listed below. 
 
+## Remaining Tasks for MVP:
+
+* Video player
+* Dark mode switch
+* Overall app design
+* Dynamic tutorial content loading
+* Written tutorials
+* Toggle button for text-to-speech
+* Text-to-Speech reading off buttons
+* Functional accessibility screen
+* API integration
+* Practice tutorial functionality
+
 
 # Customers
 ## Personas
