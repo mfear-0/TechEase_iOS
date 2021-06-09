@@ -68,6 +68,10 @@ struct SettingsScreen: View {
                 }
                 .isDetailLink(false)
                 
+                NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                }
+                .isDetailLink(false)
+                
                 CustomButton(icon: "figure.stand", label: "Accessibility")
                 .onTapGesture {
                     self.action = 1
@@ -89,7 +93,7 @@ struct SettingsScreen: View {
                         
                         Spacer()
                         
-                        Button(action: {self.action = 1}, label: {
+                        Button(action: {self.action = 3}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()

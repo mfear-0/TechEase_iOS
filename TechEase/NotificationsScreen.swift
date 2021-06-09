@@ -59,6 +59,8 @@ struct NotificationsScreen: View {
                     .navigationBarTitle("Notifications")
     //                .navigationBarItems(trailing: Text_to_SpeechButton(speech: "There are no notifications at this time."))
 
+                NavigationLink(destination: HelpScreen(), tag: 10, selection: $action) {  EmptyView()
+                }
                     
                 Spacer()
                 
@@ -67,7 +69,7 @@ struct NotificationsScreen: View {
                         
                         Spacer()
                         
-                        Button(action: {self.action = 1}, label: {
+                        Button(action: {self.action = 10}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()

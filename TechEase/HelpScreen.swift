@@ -190,7 +190,7 @@ struct HelpScreen: View {
                 }
                 .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             }
-            .navigationBarTitle("Notifications")
+            .navigationBarTitle("Help")
             .navigationBarItems(trailing: Button(action: {
                 self.appState.moveToDashboard = true
             }) {
