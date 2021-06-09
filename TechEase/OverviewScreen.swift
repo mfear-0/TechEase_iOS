@@ -70,7 +70,7 @@ struct OverviewScreen: View {
                     .padding(.bottom, 20)
                     
                     NavigationLink(
-                        destination: TechEaseTutorialList(), tag: 1, selection: $action){
+                        destination: ContentView(), tag: 1, selection: $action){
                         EmptyView()
                     }
                     .isDetailLink(false)
