@@ -84,7 +84,7 @@ struct viewDetailTutorial: View{
 
 
 struct DetailTutorial: View {
-    
+    @State var action: Int?
     var detailTutorialList : Array<Tutorial>
     var tutId: Int
     
@@ -157,6 +157,9 @@ struct DetailTutorial: View {
                                 .font(.title3)
                                 .foregroundColor(Color("Black"))
                                 .multilineTextAlignment(.leading)
+                            NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                            }
+                            .isDetailLink(false)
                         }
                         .padding(10)
                         
@@ -164,7 +167,7 @@ struct DetailTutorial: View {
                         Spacer()
     //
                         
-                        Button(action: {/*Self.action = 10*/}, label: {
+                        Button(action: {self.action = 3}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
