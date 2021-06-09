@@ -174,6 +174,9 @@ struct TechEaseTutorialList: View {
                                 .font(.title3)
                                 .foregroundColor(Color("Black"))
                                 .multilineTextAlignment(.leading)
+                            NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                            }
+                            .isDetailLink(false)
                         }
                         .padding(10)
                         
@@ -181,7 +184,7 @@ struct TechEaseTutorialList: View {
                         Spacer()
     //
                         
-                        Button(action: {}, label: {
+                        Button(action: {self.action = 3}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
