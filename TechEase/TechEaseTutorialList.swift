@@ -151,7 +151,51 @@ struct TechEaseTutorialList: View {
                         .padding(.bottom, 5)
                 }
                 .listStyle(PlainListStyle())
+                
+                ZStack {
+                    HStack {
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Image(systemName: "hand.draw")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .padding(10)
+                                .foregroundColor(Color("Black"))
+                            Text("Swipe up or down to see more content.")
+                                .font(.title3)
+                                .foregroundColor(Color("Black"))
+                                .multilineTextAlignment(.leading)
+                        }
+                        .padding(10)
+                        
+                        
+                        Spacer()
+    //
+                        
+                        Button(action: {}, label: {
+                            VStack {
+                                Image(systemName: "questionmark")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(Color("Black"))
+                                Text("Help")
+                                    .font(.title2)
+                                    .foregroundColor(Color("Black"))
+                            }
+                        })
+                        .buttonStyle(HelpButton())
+                        
+                    }
+                }.background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             }
+            
+            
+            
+            
         }
     }
 }
