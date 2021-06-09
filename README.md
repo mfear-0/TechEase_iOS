@@ -4,6 +4,28 @@ The best choice for seniors looking to improve their tech literacy.
 With written and video tutorials, and exercises to give you hands-on experience, TechEase appeals to every kind of learner.
 TechEase also features many accessibility options, and a robust help section in case you get lost or forget something.
 
+As of June 8th 2021, our current completed app meets the following MVP requirements: 
+* An accessible, high contrast, user-friendly interface.
+* Easy to understand controls, navigation, and menus.
+* A help button available on every page.
+* Some accessibility options, including text-to-speech and dark mode.
+* Dynamically loading tutorial lists that cover the most important apps and functions.
+
+While some of these will continue to evolve as we continue to work on the app, in its current state these requirements are mostly met and their implementations are functional. Remaining MVP tasks are listed below. 
+
+## Remaining Tasks for MVP:
+
+* Video player
+* Dark mode switch
+* Overall app design
+* Dynamic tutorial content loading
+* Written tutorials
+* Toggle button for text-to-speech
+* Text-to-Speech reading off buttons
+* Functional accessibility screen
+* API integration
+* Practice tutorial functionality
+
 
 # Customers
 ## Personas
