@@ -26,6 +26,10 @@ struct viewTutorial: View {
             .opacity(0)
             .buttonStyle(PlainButtonStyle())
             
+//            NavigationLink(destination: HelpScreen(), tag: 10, selection: $action) {  EmptyView()
+//            }
+//            .isDetailLink(false)
+            
             HStack{
                 Image(systemName: tutorialDisplay.Icon)
                     .resizable()
@@ -46,6 +50,7 @@ struct viewTutorial: View {
                 speakButtonText2(textToSpeak: tutorialDisplay.TutorialName)
             }
         }
+        
         .navigationBarTitle("Tutorials", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
             self.appState.moveToDashboard = true
@@ -96,6 +101,7 @@ struct viewTutorial: View {
 
 struct TechEaseTutorialList: View {
     
+    @State var action: Int?
     
     /*
     
@@ -191,11 +197,9 @@ struct TechEaseTutorialList: View {
                         
                     }
                 }.background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
-            }
-            
-            
-            
-            
+                
+                
+            }    
         }
     }
 }

@@ -31,6 +31,10 @@ struct viewDetailTutorial: View{
             .opacity(0)
             .buttonStyle(PlainButtonStyle())
             
+//            NavigationLink(destination: HelpScreen(), tag: 10, selection: $action) {  EmptyView()
+//            }
+//            .isDetailLink(false)
+            
             HStack{
                 Image(systemName: detailTutDisplay.Icon)
                     .resizable()
@@ -160,7 +164,7 @@ struct DetailTutorial: View {
                         Spacer()
     //
                         
-                        Button(action: {}, label: {
+                        Button(action: {/*Self.action = 10*/}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
