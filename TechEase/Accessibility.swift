@@ -155,7 +155,7 @@ struct Accessibility: View {
                 
                 ZStack {
                     HStack {
-                        /*
+                        
                         HStack {
                             Image(systemName: "hand.draw")
                                 .resizable()
@@ -169,17 +169,16 @@ struct Accessibility: View {
                                 .multilineTextAlignment(.leading)
                         }
                         .padding(10)
-                        */
+                        
                         
                         Spacer()
-    //                    NavigationLink(
-    //                        destination: HelpScreen(), tag: 1, selection: $action){
-    //                        EmptyView()
-    //                    }
-    //                    .isDetailLink(false)
+                        NavigationLink(
+                            destination: HelpScreen(), tag: 10, selection: $action){
+                            EmptyView()
+                        }
                         // I tried to get the help button working to test the navbar stuff, but couldn't quite get it done. -mfear
                         
-                        Button(action: {self.action = 1}, label: {
+                        Button(action: {self.action = 10}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
