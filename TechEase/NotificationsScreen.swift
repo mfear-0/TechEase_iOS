@@ -61,6 +61,29 @@ struct NotificationsScreen: View {
 
                     
                 Spacer()
+                
+                ZStack {
+                    HStack {
+                        
+                        Spacer()
+                        
+                        Button(action: {self.action = 1}, label: {
+                            VStack {
+                                Image(systemName: "questionmark")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(Color("Black"))
+                                Text("Help")
+                                    .font(.title2)
+                                    .foregroundColor(Color("Black"))
+                            }
+                        })
+                        .buttonStyle(HelpButton())
+                        
+                    }
+                }
+
             }
             .navigationBarItems(trailing: Button(action: {
                 self.appState.moveToDashboard = true
