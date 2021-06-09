@@ -10,6 +10,9 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
+    @EnvironmentObject var appState: AppState
+    @State var action: Int?
+    
     
     func FileIO() -> [String] {
         let str2 = ["default", "text"]
@@ -201,8 +204,29 @@ struct ContentView: View {
                 
             }
         }
-        
+        .navigationBarTitle("Settings", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            self.appState.moveToDashboard = true
+        }) {
+            
+            Text_to_SpeechButton(speech: "")
+                .padding(.trailing, 7.0)
+            
+            
+            VStack {
+                Image(systemName: "house")
+                    .foregroundColor(Color("Black"))
+                Text("Home")
+                    .foregroundColor(Color("Black"))
+                    // Arica: It seems you actually can customize the font size, but it loses that bold look that is automatically applied to links in the navigation bar.
+                    //.font(.title3)
+            }
+            // Arica: This was @Mackenzie's original code.
+            //Text("Home")
+        }
+        .padding(.trailing, 3.0))
     }
+    
 }
 
 
