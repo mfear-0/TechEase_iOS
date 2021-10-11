@@ -407,11 +407,17 @@ struct ContentView: View {
                             
                             CustomButton(icon: "hand.raised", label: "Practice Tutorial")
                                 .onTapGesture {
-                                    self.action = 1
+                                    self.action = 2
                                     speakButtonText(textToSpeak: "Practice Tutorial")
                                 }
                                 .padding()
                             
+                            
+                            NavigationLink(
+                                destination: VideoTutorialScreen(), tag: 1, selection: $action){
+                                EmptyView()
+                            }
+                            .isDetailLink(false)
                             CustomButton(icon: "play.rectangle", label: "Video Tutorial")
                                 .onTapGesture {
                                     self.action = 1

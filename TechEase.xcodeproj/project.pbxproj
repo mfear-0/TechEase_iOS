@@ -21,6 +21,8 @@
 		3FAB3AF2266C232D00E207CA /* The Compass Tutorial.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB3AF1266C232D00E207CA /* The Compass Tutorial.txt */; };
 		3FEBDF45265076CD006C9F4C /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBDF44265076CD006C9F4C /* HelpButton.swift */; };
 		3FEF5180263CD94E00237755 /* NotificationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF517F263CD94E00237755 /* NotificationsScreen.swift */; };
+		5F01774A2714DDDE0006F0B5 /* VideoTutorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0177492714DDDE0006F0B5 /* VideoTutorialScreen.swift */; };
+		5F01774C2714DEB70006F0B5 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01774B2714DEB70006F0B5 /* VideoView.swift */; };
 		5F51B5952659BF23001C97F9 /* Text_to_SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51B5942659BF23001C97F9 /* Text_to_SpeechButton.swift */; };
 		5F51B597265C0832001C97F9 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51B596265C0832001C97F9 /* SpeechButton.swift */; };
 		5FA4B4A0264DCC2800C357C3 /* OverviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */; };
@@ -52,6 +54,8 @@
 		3FAB3AF1266C232D00E207CA /* The Compass Tutorial.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "The Compass Tutorial.txt"; sourceTree = "<group>"; };
 		3FEBDF44265076CD006C9F4C /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
 		3FEF517F263CD94E00237755 /* NotificationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsScreen.swift; sourceTree = "<group>"; };
+		5F0177492714DDDE0006F0B5 /* VideoTutorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTutorialScreen.swift; sourceTree = "<group>"; };
+		5F01774B2714DEB70006F0B5 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		5F51B5942659BF23001C97F9 /* Text_to_SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_to_SpeechButton.swift; sourceTree = "<group>"; };
 		5F51B596265C0832001C97F9 /* SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
 		5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreen.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				3F0F5B03262BC97B00446AD2 /* ContentView.swift */,
 				5FB46C36263D9851008B809D /* DetailTutorial.swift */,
 				5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */,
+				5F0177492714DDDE0006F0B5 /* VideoTutorialScreen.swift */,
 				3F0F5B05262BC97C00446AD2 /* Assets.xcassets */,
 				3F0F5B0A262BC97C00446AD2 /* Info.plist */,
 				3F0F5B07262BC97C00446AD2 /* Preview Content */,
@@ -147,6 +152,7 @@
 				3FEBDF44265076CD006C9F4C /* HelpButton.swift */,
 				5F51B5942659BF23001C97F9 /* Text_to_SpeechButton.swift */,
 				5F51B596265C0832001C97F9 /* SpeechButton.swift */,
+				5F01774B2714DEB70006F0B5 /* VideoView.swift */,
 			);
 			path = ModelsAndCustomViews;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				3FEBDF45265076CD006C9F4C /* HelpButton.swift in Sources */,
 				5FFDE810262FABCB00ADEEDF /* SettingsScreen.swift in Sources */,
 				3F0F5B04262BC97B00446AD2 /* ContentView.swift in Sources */,
+				5F01774A2714DDDE0006F0B5 /* VideoTutorialScreen.swift in Sources */,
 				3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */,
 				5FB46C3A263D98FF008B809D /* TutorialModel.swift in Sources */,
 				5FB46C37263D9851008B809D /* DetailTutorial.swift in Sources */,
@@ -233,6 +240,7 @@
 				3FAB3AE426554C1000E207CA /* SceneDelegate.swift in Sources */,
 				5FFDE814262FAFF200ADEEDF /* Accessibility.swift in Sources */,
 				3F029DB5265E039F009BA7CC /* InternetTutorialsContent.swift in Sources */,
+				5F01774C2714DEB70006F0B5 /* VideoView.swift in Sources */,
 				3F029DB1265E01BF009BA7CC /* PhoneFeaturesTutorialsContent.swift in Sources */,
 				5FB46C40263D9A8D008B809D /* RoundedButton.swift in Sources */,
 				5F51B5952659BF23001C97F9 /* Text_to_SpeechButton.swift in Sources */,
