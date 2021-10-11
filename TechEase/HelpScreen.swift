@@ -7,6 +7,7 @@
 //  Modified by Arica Conrad on 5/16/21.
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 import SwiftUI
@@ -138,8 +139,6 @@ struct HelpScreen: View {
                     }
                     .padding()
                     .buttonStyle(RoundedButton())
-                    
-                    
                 }
                 
                 /*
@@ -148,13 +147,16 @@ struct HelpScreen: View {
                  
                  What the styling at the end of the ZStack does is it makes a light gray rectangle to outline our scroll text. I had to use the RoundedRectangle style, but I set the corner radius value to be zero so it still looks like a rectangle.
                  
-                 @Hans Mandt
-                 When you add the Help Button to each screen, please use the following code. If the screen scolls, please also include the code for the scroll icon and text.
-                 
                 */
                 
+                // Arica: The Help button.
                 ZStack {
+                    
                     HStack {
+                        
+                        // Arica: Since this screen just shows the text, I don't need this Spacer.
+                        //Spacer()
+                        
                         HStack {
                             Image(systemName: "hand.draw")
                                 .resizable()
@@ -166,26 +168,13 @@ struct HelpScreen: View {
                                 .font(.title3)
                                 .foregroundColor(Color("Black"))
                                 .multilineTextAlignment(.leading)
+                            NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                            }
+                            .isDetailLink(false)
                         }
                         .padding(10)
-
-                        Spacer()
                         
-                        /*
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            VStack {
-                                Image(systemName: "questionmark")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40, height: 40)
-                                    .foregroundColor(Color("Black"))
-                                Text("Help")
-                                    .font(.title2)
-                                    .foregroundColor(Color("Black"))
-                            }
-                        })
-                        .buttonStyle(HelpButton())
-                        */
+                        Spacer()
                     }
                 }
                 .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
