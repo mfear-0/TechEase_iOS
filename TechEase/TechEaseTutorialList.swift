@@ -8,6 +8,7 @@
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified By Natalman Nahm on 06/05/21
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 import SwiftUI
@@ -158,7 +159,9 @@ struct TechEaseTutorialList: View {
                 }
                 .listStyle(PlainListStyle())
                 
+                // Arica: The Help button.
                 ZStack {
+                    
                     HStack {
                         
                         Spacer()
@@ -180,9 +183,7 @@ struct TechEaseTutorialList: View {
                         }
                         .padding(10)
                         
-                        
                         Spacer()
-    //
                         
                         Button(action: {self.action = 3}, label: {
                             VStack {
@@ -197,11 +198,9 @@ struct TechEaseTutorialList: View {
                             }
                         })
                         .buttonStyle(HelpButton())
-                        
                     }
-                }.background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
-                
-                
+                }
+                .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             }    
         }
     }

@@ -9,6 +9,7 @@
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified by Natalman Nahm on 5/25/21
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 import SwiftUI
@@ -144,17 +145,12 @@ struct Accessibility: View {
                     
                 }
                 
-                /*
-                            
-                Arica: This is the code for showing the scroll icon, scroll text, and Help Button. If a screen does not scroll, you can comment out the swipe icon and text.
-                 
-                 VERY IMPORTANT!
-                 On a screen that does not scroll, also comment out the styling at the end of the ZStack. It is not needed if we just have the Help Button (and an outline looks kind of odd without the scroll text).
-                 
-                */
-                
+                // Arica: The Help button.
                 ZStack {
+                    
                     HStack {
+                        
+                        Spacer()
                         
                         HStack {
                             Image(systemName: "hand.draw")
@@ -167,18 +163,15 @@ struct Accessibility: View {
                                 .font(.title3)
                                 .foregroundColor(Color("Black"))
                                 .multilineTextAlignment(.leading)
+                            NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                            }
+                            .isDetailLink(false)
                         }
                         .padding(10)
                         
-                        
                         Spacer()
-                        NavigationLink(
-                            destination: HelpScreen(), tag: 10, selection: $action){
-                            EmptyView()
-                        }
-                        // I tried to get the help button working to test the navbar stuff, but couldn't quite get it done. -mfear
                         
-                        Button(action: {self.action = 10}, label: {
+                        Button(action: {self.action = 3}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
@@ -191,12 +184,9 @@ struct Accessibility: View {
                             }
                         })
                         .buttonStyle(HelpButton())
-                        
+                        }
                     }
-                }
-                /*
                 .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
-                */
             }
         }
     }
