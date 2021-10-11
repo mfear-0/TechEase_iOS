@@ -16,6 +16,7 @@
 		3F0F5B06262BC97C00446AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B05262BC97C00446AD2 /* Assets.xcassets */; };
 		3F0F5B09262BC97C00446AD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */; };
 		3F6D5ECD2630C14600B6C7BB /* HelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */; };
+		3F7F080E2714B59B00B192DE /* TPTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F080D2714B59B00B192DE /* TPTest.swift */; };
 		3FAB3AE426554C1000E207CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB3AE326554C1000E207CA /* SceneDelegate.swift */; };
 		3FAB3AEE266C161800E207CA /* Test2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB3AED266C161800E207CA /* Test2.txt */; };
 		3FAB3AF2266C232D00E207CA /* The Compass Tutorial.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB3AF1266C232D00E207CA /* The Compass Tutorial.txt */; };
@@ -47,6 +48,7 @@
 		3F0F5B08262BC97C00446AD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F0F5B0A262BC97C00446AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6D5ECC2630C14600B6C7BB /* HelpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreen.swift; sourceTree = "<group>"; };
+		3F7F080D2714B59B00B192DE /* TPTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPTest.swift; sourceTree = "<group>"; };
 		3FAB3AE326554C1000E207CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3FAB3AED266C161800E207CA /* Test2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test2.txt; sourceTree = "<group>"; };
 		3FAB3AF1266C232D00E207CA /* The Compass Tutorial.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "The Compass Tutorial.txt"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				3F0F5B03262BC97B00446AD2 /* ContentView.swift */,
 				5FB46C36263D9851008B809D /* DetailTutorial.swift */,
 				5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */,
+				3F7F080D2714B59B00B192DE /* TPTest.swift */,
 				3F0F5B05262BC97C00446AD2 /* Assets.xcassets */,
 				3F0F5B0A262BC97C00446AD2 /* Info.plist */,
 				3F0F5B07262BC97C00446AD2 /* Preview Content */,
@@ -242,6 +245,7 @@
 				5FB46C42263DAB16008B809D /* ListOfTutorials.swift in Sources */,
 				3F0F5B02262BC97B00446AD2 /* TechEaseApp.swift in Sources */,
 				5FFDE801262FA58B00ADEEDF /* TechEaseTutorialList.swift in Sources */,
+				3F7F080E2714B59B00B192DE /* TPTest.swift in Sources */,
 				5FB46C35263CBF39008B809D /* Homepage.swift in Sources */,
 				5F51B597265C0832001C97F9 /* SpeechButton.swift in Sources */,
 			);
