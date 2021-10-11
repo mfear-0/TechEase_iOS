@@ -412,6 +412,10 @@ struct ContentView: View {
                                 }
                                 .padding()
                             
+                            NavigationLink(
+                                destination: VideoTutorialScreen(), tag: 1, selection: $action){
+                                EmptyView()
+                            }
                             CustomButton(icon: "play.rectangle", label: "Video Tutorial")
                                 .onTapGesture {
                                     self.action = 1

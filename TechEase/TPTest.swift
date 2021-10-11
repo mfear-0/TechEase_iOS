@@ -38,7 +38,7 @@ struct TPTestView: View {
             }
             .frame(width:100, height:100, alignment: .center)
             .padding(.all, 20)
-            .position(x:xPos, y:yPos)
+            .position(x:CGFloat(xPos), y:CGFloat(yPos))
 
 
         }
