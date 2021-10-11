@@ -5,6 +5,7 @@
 //  Created by Arica Conrad on 4/30/21.
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 import SwiftUI
@@ -64,12 +65,33 @@ struct NotificationsScreen: View {
                     
                 Spacer()
                 
+                // Arica: The Help button.
                 ZStack {
+                    
                     HStack {
                         
                         Spacer()
                         
-                        Button(action: {self.action = 10}, label: {
+                        HStack {
+                            Image(systemName: "hand.draw")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .padding(10)
+                                .foregroundColor(Color("Black"))
+                            Text("Swipe up or down to see more content.")
+                                .font(.title3)
+                                .foregroundColor(Color("Black"))
+                                .multilineTextAlignment(.leading)
+                            NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                            }
+                            .isDetailLink(false)
+                        }
+                        .padding(10)
+                        
+                        Spacer()
+                        
+                        Button(action: {self.action = 3}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
@@ -82,10 +104,9 @@ struct NotificationsScreen: View {
                             }
                         })
                         .buttonStyle(HelpButton())
-                        
                     }
                 }
-
+                .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             }
             .navigationBarItems(trailing: Button(action: {
                 self.appState.moveToDashboard = true

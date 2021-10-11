@@ -7,6 +7,7 @@
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified by Natalman Nahm on 5/22/21.
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 import SwiftUI
@@ -117,6 +118,49 @@ struct Homepage: View {
                         .padding()
                     
                     Spacer()
+                    
+                    // Arica: The Help button.
+                    ZStack {
+                        
+                        HStack {
+                            
+                            Spacer()
+                            
+                            HStack {
+                                Image(systemName: "hand.draw")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .padding(10)
+                                    .foregroundColor(Color("Black"))
+                                Text("Swipe up or down to see more content.")
+                                    .font(.title3)
+                                    .foregroundColor(Color("Black"))
+                                    .multilineTextAlignment(.leading)
+                                NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                                }
+                                .isDetailLink(false)
+                            }
+                            .padding(10)
+                            
+                            Spacer()
+                            
+                            Button(action: {self.action = 3}, label: {
+                                VStack {
+                                    Image(systemName: "questionmark")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 40, height: 40)
+                                        .foregroundColor(Color("Black"))
+                                    Text("Help")
+                                        .font(.title2)
+                                        .foregroundColor(Color("Black"))
+                                }
+                            })
+                            .buttonStyle(HelpButton())
+                        }
+                    }
+                    .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
                     
                 }
                 .navigationBarItems(trailing: Text_to_SpeechButton(speech: "Welcome! Tap a button to access the tutorials or the settings. If you need help, tap the help button in the bottom right corner."))

@@ -5,6 +5,7 @@
 //  Created by Natalman Nahm on 5/13/21.
 //  Modified By Natalman Nahm on 06/05/21
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 import SwiftUI
@@ -91,7 +92,9 @@ struct OverviewScreen: View {
                     
                 }
                 
+                // Arica: The Help button.
                 ZStack {
+                    
                     HStack {
                         
                         Spacer()
@@ -113,7 +116,9 @@ struct OverviewScreen: View {
                         }
                         .padding(10)
                         
-                        Button(action: {self.action = 10}, label: {
+                        Spacer()
+                        
+                        Button(action: {self.action = 3}, label: {
                             VStack {
                                 Image(systemName: "questionmark")
                                     .resizable()
@@ -126,11 +131,9 @@ struct OverviewScreen: View {
                             }
                         })
                         .buttonStyle(HelpButton())
-                        
                     }
                 }
-
-                
+                .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             }
             .padding(.top, 0)
             .listStyle(PlainListStyle())

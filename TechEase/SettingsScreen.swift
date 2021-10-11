@@ -8,6 +8,7 @@
 //  Modified by Arica Conrad on 5/20/21.
 //  Modified by Natalman Nahm on 5/24/21
 //  Modified by Arica Conrad on 6/6/21.
+//  Modified by Arica Conrad on 10/10/21.
 //
 
 
@@ -88,8 +89,29 @@ struct SettingsScreen: View {
                 
                 Spacer()
                 
+                // Arica: The Help button.
                 ZStack {
+                    
                     HStack {
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Image(systemName: "hand.draw")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .padding(10)
+                                .foregroundColor(Color("Black"))
+                            Text("Swipe up or down to see more content.")
+                                .font(.title3)
+                                .foregroundColor(Color("Black"))
+                                .multilineTextAlignment(.leading)
+                            NavigationLink(destination: HelpScreen(), tag: 3, selection: $action) {  EmptyView()
+                            }
+                            .isDetailLink(false)
+                        }
+                        .padding(10)
                         
                         Spacer()
                         
@@ -106,14 +128,10 @@ struct SettingsScreen: View {
                             }
                         })
                         .buttonStyle(HelpButton())
-                        
                     }
                 }
-
+                .background(RoundedRectangle(cornerRadius: 0).stroke(Color("LightGray"), lineWidth: 4).background(Color("White")))
             }
-            
-            
-            
             .navigationBarTitle("Settings", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 self.appState.moveToDashboard = true
