@@ -20,6 +20,7 @@
 		3FAB3AE426554C1000E207CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB3AE326554C1000E207CA /* SceneDelegate.swift */; };
 		3FAB3AEE266C161800E207CA /* Test2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB3AED266C161800E207CA /* Test2.txt */; };
 		3FAB3AF2266C232D00E207CA /* The Compass Tutorial.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB3AF1266C232D00E207CA /* The Compass Tutorial.txt */; };
+		3FAB5FB5271D117E006B0C71 /* VisionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB5FB4271D117E006B0C71 /* VisionOptions.swift */; };
 		3FEBDF45265076CD006C9F4C /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBDF44265076CD006C9F4C /* HelpButton.swift */; };
 		3FEF5180263CD94E00237755 /* NotificationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF517F263CD94E00237755 /* NotificationsScreen.swift */; };
 		5F0177502714ECD10006F0B5 /* VideoTutorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01774F2714ECD10006F0B5 /* VideoTutorialScreen.swift */; };
@@ -54,6 +55,7 @@
 		3FAB3AE326554C1000E207CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3FAB3AED266C161800E207CA /* Test2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test2.txt; sourceTree = "<group>"; };
 		3FAB3AF1266C232D00E207CA /* The Compass Tutorial.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "The Compass Tutorial.txt"; sourceTree = "<group>"; };
+		3FAB5FB4271D117E006B0C71 /* VisionOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOptions.swift; sourceTree = "<group>"; };
 		3FEBDF44265076CD006C9F4C /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
 		3FEF517F263CD94E00237755 /* NotificationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsScreen.swift; sourceTree = "<group>"; };
 		5F01774F2714ECD10006F0B5 /* VideoTutorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTutorialScreen.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5F01774F2714ECD10006F0B5 /* VideoTutorialScreen.swift */,
 				5FA4B49F264DCC2800C357C3 /* OverviewScreen.swift */,
 				3F7F080D2714B59B00B192DE /* TPTest.swift */,
+				3FAB5FB4271D117E006B0C71 /* VisionOptions.swift */,
 				3F0F5B05262BC97C00446AD2 /* Assets.xcassets */,
 				3F0F5B0A262BC97C00446AD2 /* Info.plist */,
 				3F0F5B07262BC97C00446AD2 /* Preview Content */,
@@ -255,6 +258,7 @@
 				5F0177522714ECFA0006F0B5 /* VideoView.swift in Sources */,
 				3F7F080E2714B59B00B192DE /* TPTest.swift in Sources */,
 				5FB46C35263CBF39008B809D /* Homepage.swift in Sources */,
+				3FAB5FB5271D117E006B0C71 /* VisionOptions.swift in Sources */,
 				5F51B597265C0832001C97F9 /* SpeechButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
