@@ -12,8 +12,8 @@ struct TPTestView: View {
     @State var action: Int?
     
     @State private var bgImg = Image("phonebg")
-    @State private var xPos = 95.0
-    @State private var yPos = 265.0
+    @State private var xPos = 100.0
+    @State private var yPos = 250.0
     @State private var bWidth = 100.0
     @State private var bHeight = 100.0
     @State private var bText = "Click Here"
@@ -30,8 +30,8 @@ struct TPTestView: View {
                 switch self.bgImg {
                 case Image("phonebg"):
                     self.bgImg = Image("compbg")
-                    self.xPos = 200.0
-                    self.yPos = 667.0
+                    self.xPos = 195.0
+                    self.yPos = 627.0
                     self.bWidth = 1000.0
                     self.bText = " "
                     self.edge1 = 300.0
@@ -41,13 +41,13 @@ struct TPTestView: View {
                     self.cgColor = Color.black
                     self.bgImg = Image("mapbg")
                     self.xPos = 195
-                    self.yPos = 393
+                    self.yPos = 373
                     self.edge1 = 37.0
                     self.inst = "This shows your location on the map. Click the blue marker to repeat the tutorial, or click here to return."
                 default:
                     self.bgImg = Image("phonebg")
-                    self.xPos = 95.0
-                    self.yPos = 265.0
+                    self.xPos = 100.0
+                    self.yPos = 250.0
                     self.edge1 = 10.0
                     self.inst = "Click the Compass app to open it."
                     self.bWidth = 100.0
@@ -78,12 +78,6 @@ struct TPTestView: View {
             }
             .isDetailLink(false)
 
-
-            
-
-
-                
-            
                 
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
