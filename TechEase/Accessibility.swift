@@ -10,6 +10,7 @@
 //  Modified by Natalman Nahm on 5/25/21
 //  Modified by Arica Conrad on 6/6/21.
 //  Modified by Arica Conrad on 10/10/21.
+//  Modified by Arica Conrad on 10/17/21.
 //
 
 import SwiftUI
@@ -82,7 +83,23 @@ struct Accessibility: View {
                     .padding()
                     .buttonStyle(RoundedButton())
                     
+                    // Arica: This is a working Vision Options button. The implementation is a little bit different than the other buttons.
                     
+                    NavigationLink(destination: VisionOptions(), tag: 1, selection: $action) {
+                        EmptyView()
+                    }
+                    .isDetailLink(false)
+                    
+                    CustomButton(icon: "eye", label: "Vision Options")
+                    .onTapGesture {
+                        self.action = 1
+                        speakButtonText(textToSpeak: "Vision Options")
+                    }
+                    .padding()
+                    
+                    // Arica: This was the original code for the Vision Options button. I am leaving this here in the event we need it.
+                    
+                    /*
                     Button(action: {
                         speakButtonText(textToSpeak: "Vision Options")
                     }) {
@@ -104,7 +121,7 @@ struct Accessibility: View {
                     }
                     .padding()
                     .buttonStyle(RoundedButton())
-                    
+                    */
                     
                     Button(action: {
                         speakButtonText(textToSpeak: "Voice Commands")

@@ -8,6 +8,7 @@
 //  Modified by Natalman Nahm on 5/22/21.
 //  Modified by Arica Conrad on 6/6/21.
 //  Modified by Arica Conrad on 10/10/21.
+//  Modified by Arica Conrad on 10/17/21.
 //
 
 import SwiftUI
@@ -18,6 +19,9 @@ class AppState: ObservableObject {
 }
 
 struct Homepage: View {
+    
+    // Arica: To store the dark mode switch's value.
+    @AppStorage("isDarkMode") private var isDarkMode = false
     
     @State var action: Int?
     @EnvironmentObject var appState: AppState
@@ -175,6 +179,9 @@ struct Homepage: View {
                 }
             }
         }
+        // Arica: To switch between light mode and dark mode. This should apply to all screens since all screens direct back to this one (the home screen).
+        .environment(\.colorScheme, isDarkMode ? .dark : .light)
+        
         /*
         
         Arica: This changes the color of the back button in the navigation menu. Putting this code here affects all the screens.
